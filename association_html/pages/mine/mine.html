@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/mine.css">
+    <link rel="stylesheet" href="../../plug/laypage/skin/laypage.css">
+    <link rel="stylesheet" href="../../plug/sign/sign.css">
+    <link rel="stylesheet" href="../../plug/cropbox/style.css">
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="logo">
+            <a href="../index.html"></a>
+        </div>
+        <div class="user">
+            <ul class="menu">
+                <li>
+                    <a href="javascript:void(0)" class="logout">退出</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="set"></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="news"><i>20</i></a>
+                </li>
+            </ul>
+            <div class="username">
+                <a href="javascript:void(0)">宋小宝</a>
+            </div>
+            <div class="avatar">
+                <a href="javascript:void(0)"><img src="../../images/crowd/avatar.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</header>
+<nav>
+    <div class="wrap">
+        <ul>
+            <li class="active">
+                <a href="../index.html">主页</a>
+            </li>
+            <li>
+                <a href="./material.html">资料</a>
+            </li>
+            <li>
+                <a href="./mycontacts.html">我的人脉</a>
+            </li>
+            <li>
+                <a href="./myrecom.html">我要推荐</a>
+            </li>
+        </ul>
+        <div class="search">
+            <select>
+                <option value="">全站</option> <option value="">全网</option>
+            </select>
+            <input type="text" placeholder="请输入搜索内容">
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="wrap">
+        <div class="banner">
+            <img src="../../images/background.png" class="cover" alt="">
+            <input type="file" id="cover">
+            <label for="cover" class="addcover">添加封面</label>
+            <div class="ban-con">
+                <div class="avatar">
+                    <div class="pic">
+                        <img src="../../images/mine/avator.png" alt="">
+                        <button class="edit-ava" onclick="editAva()">编辑头像</button>
+                    </div>
+                    <div class="ava-name">
+                        <h2>孟小宝</h2>
+                        <span class="age">29岁</span>
+                    </div>
+                </div>
+                <div class="ban-sign">
+                    <div class="sign-date">
+                        <div class="sign">
+                            <button class="just-qiandao qiandao-sprits sign-btn" >签到</button>
+                            <div class="qiandao-warp">
+                                <div class="checkin"> </div>
+                                <div class="mask">
+                                    <div class="modal">
+                                        <div class="close">
+                                            <a href="javascript:void(0)" class="closeBtn">
+                                                <img src="../../images/mine/close.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="singed">
+                                            <img src="../../images/mine/gou.png">
+                                            <p>已签到！</p>
+                                            <span>已联系签到<span>2</span>天</span>
+                                        </div>
+                                        <div class="gift">
+                                            <img src="../../images/mine/gift.png" alt="">
+                                            <strong>贡献币20</strong>
+                                        </div>
+                                        <div class="btn">
+                                            <button id="signSure">确定</button>
+                                        </div>
+                                        
+                                    </div>
+                                    <div id="modalbg"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="date">
+                            <p  class="current-date">03月22日</p>
+                            <p class="week">星期三</p>
+                        </div>
+                    </div>
+                    <div class="recommend">
+                        <a href="javascript:void(0)" >我要推荐</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="con-left">
+                <div class="user-info">
+                    <div class="info-item">
+                        <div class="item-tit">
+                            <h4 class="ziliao">个人资料</h4>
+                            <a href="javascript:void(0)">编辑</a>
+                        </div>
+                        <ul class="item-con">
+                            <li>
+                                <span>昵称</span>
+                                <p>孟小宝</p>
+                            </li>
+                            <li>
+                                <span>账号</span>
+                                <p>123541515545</p>
+                            </li>
+                            <li>
+                                <span>邮箱</span>
+                                <p>5454852@qq.com</p>
+                            </li>
+
+                            <li>
+                                <span>电话</span>
+                                <p>15451457555</p>
+                            </li>
+                            <li>
+                                <span>推荐人</span>
+                                <p>王博</p>
+                            </li>
+                            <li>
+                                <span>地址</span>
+                                <p>广东省广州市天河区棠东</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info-item">
+                        <div class="item-tit">
+                            <h4 class="ziliao">个人经验</h4>
+                        </div>
+                        <div class="item-con">
+                            <div class="progress">
+                                <p class="pro-tit">贡献值</p>
+                                <div class="bar">
+                                    <p class="bar-load">
+                                        <span class="bar-loading"></span>
+                                    </p>
+                                    <p class="num">1200</p>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <p class="pro-tit">信誉值</p>
+                                <div class="bar">
+                                    <p class="bar-load">
+                                        <span class="bar-loading red"></span>
+                                    </p>
+                                    <p class="num">200</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="posts">
+                    <div class="posts-tit"><h4>我的帖子</h4></div>
+                    <ul class="posts-con">
+                       <li>
+                           <span class="col-3">帖子</span>
+                           <span class="col-1">板块</span>
+                           <span class="col-1">浏览/模块</span>
+                       </li>
+                        <li>
+                            <a href="javascript:void(0)" class="col-3">检测台灯评检的方法检测台灯评检的方法检测台灯评检的方法检测台灯评检的方法</a>
+                            <a href="javascript:void(0)" class="col-1">干货分享</a>
+                            <p class="col-1">
+                                <a href="javascript:void(0)">1100</a>/<a href="javascript:void(0)">220</a>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="col-3">检测台灯评检的方法</a>
+                            <a href="javascript:void(0)" class="col-1">干货分享</a>
+                            <p class="col-1">
+                                <a href="javascript:void(0)">1100</a>/<a href="javascript:void(0)">220</a>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="col-3">检测台灯评检的方法</a>
+                            <a href="javascript:void(0)" class="col-1">干货分享</a>
+                            <p class="col-1">
+                                <a href="javascript:void(0)">1100</a>/<a href="javascript:void(0)">220</a>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="col-3">检测台灯评检的方法</a>
+                            <a href="javascript:void(0)" class="col-1">干货分享</a>
+                            <p class="col-1">
+                                <a href="javascript:void(0)">1100</a>/<a href="javascript:void(0)">220</a>
+                            </p>
+                        </li>
+
+                    </ul>
+                    <div id="pages"></div>
+                </div>
+            </div>
+            <div class="con-right">
+                <div class="friends">
+                    <div class="friends-tit">
+                        <h4>我的人脉</h4>
+                    </div>
+                    <div class="friends-con">
+                        <div class="friend-list">
+                            <div class="list-tit">
+                                同学 <span>400</span>
+                            </div>
+                            <ul class="list-con">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="more-friend">
+                                        <img src="../../images/mine/friends.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="friend-list">
+                            <div class="list-tit">
+                                同事 <span>400</span>
+                            </div>
+                            <ul class="list-con">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="more-friend">
+                                        <img src="../../images/mine/friends.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="friend-list">
+                            <div class="list-tit">
+                                好友 <span>400</span>
+                            </div>
+                            <ul class="list-con">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="more-friend">
+                                        <img src="../../images/mine/friends.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="friend-list">
+                            <div class="list-tit">
+                                同乡 <span>400</span>
+                            </div>
+                            <ul class="list-con">
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../../images/crowd/avatar03.png" alt="">
+                                        <span>王博文儿</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)" class="more-friend">
+                                        <img src="../../images/mine/friends.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cropbox">
+            <div class="head">
+                <p>编辑头像</p>
+                <a href="javascript:void(0)" onclick="editAvaClose()"><img src="../../images/mine/close.png" alt=""></a>
+            </div>
+            <strong>小头像预览</strong>
+            <div class="imageBox">
+                <div class="thumbBox">
+                </div>
+                <div class="spinner" style="display: none">
+                    Loading...</div>
+            </div>
+            <div class="action">
+                 <!--<input type="file" id="file" style=" width: 200px; display: none;">-->
+                <div class="new-contentarea tc">
+                    <a href="javascript:void(0)" class="upload-img">
+                        <label for="upload-file">
+                            选择图像</label>
+                    </a>
+                    <input type="file" class="" name="upload-file" id="upload-file" />
+                </div>
+                <input type="button" id="btnSubmit" class="Btnsty_peyton" value="上传" />
+                <input type="button" id="btnCrop" class="Btnsty_peyton" value="裁切" />
+                <input type="button" id="btnZoomIn" class="Btnsty_peyton" value="+" />
+                <input type="button" id="btnZoomOut" class="Btnsty_peyton" value="-" />
+            </div>
+            <div class="cropped">
+            </div>
+        </div>
+        <div class="cropboxbg"></div>
+    </div>
+
+</div>
+
+<div class="qiandao-layer qiandao-active"></div>
+
+<footer>
+    <div class="wrap">
+        <ul>
+            <li>关于社区</li>
+            <li>法律声明</li>
+            <li>合作伙伴</li>
+            <li>联系我们</li>
+        </ul>
+        <p>Copyright &copy; 2009-2017 BEIJINGAIJIATIANCHENG 北京艾佳天诚信息技术有限公司</p>
+    </div>
+</footer>
+
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../plug/laypage/laypage.js"></script>
+<script src="../../plug/sign/sign.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../plug/cropbox/cropbox.js"></script>
+<script>
+    laypage({
+        cont: 'pages', //容器。值支持id名、原生dom对象，jquery对象,
+        pages: 10, //总页数
+        skin: 'flow', //皮肤
+        first: 1, //将首页显示为数字1,。若不显示，设置false即可
+        last: 10, //将尾页显示为总页数。若不显示，设置false即可
+        prev:" ",
+        next:" "
+    });
+    //图片裁决
+    $(window).load(function () {
+        var options =
+            {
+                thumbBox: '.thumbBox',
+                spinner: '.spinner',
+                imgSrc: '/plug/cropbox/avatar.png'
+            }
+        var cropper = $('.imageBox').cropbox(options);
+        $('#upload-file').on('change', function () {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                options.imgSrc = e.target.result;
+                cropper = $('.imageBox').cropbox(options);
+            }
+            reader.readAsDataURL(this.files[0]);
+//            this.files = [];
+        })
+        $('#btnCrop').on('click', function () {
+            var img = cropper.getDataURL();
+            $('.cropped').html('');
+            $('.cropped').append('<img src="' + img + '" align="absmiddle" style="width:50px;margin-top:4px;box-shadow:0px 0px 12px #7E7E7E;" ><p>50px*50px</p>');
+            $('.cropped').append('<img src="' + img + '" align="absmiddle" style="width:30px;margin-top:4px;box-shadow:0px 0px 12px #7E7E7E;"><p>30px*30px</p>');
+
+        })
+        $('#btnZoomIn').on('click', function () {
+            cropper.zoomIn();
+        })
+        $('#btnZoomOut').on('click', function () {
+            cropper.zoomOut();
+        })
+        $('#btnSubmit').on('click', function () {
+            $('#circularG').show();
+            var img = cropper.getDataURL().replace('data:image/png;base64,', '');
+            var url = 'AvatarHandler.ashx';
+            var data = {
+                action: "add",
+                picStr: img
+            };
+            $.ajax(url, {
+                type: 'post',
+                data: data,
+                success: function (data) {
+                    $('#circularG').hide();
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+            });
+        })
+        $('#btnGetAvatar').on('click', function () {
+            var url = 'AvatarHandler.ashx';
+            var data = {
+                action: "get"
+            };
+            $.ajax(url, {
+                type: 'post',
+                data: data,
+                success: function (data) {
+                    $("#avatarimg").append('<img src="data:image/png;base64,' + data + '" align="absmiddle" style="width:64px;margin-top:4px;border-radius:64px;box-shadow:0px 0px 12px #7E7E7E;" ><p>64px*64px</p>');
+                },
+                error: function (XMLHttpRequest, textStatus, errorThrown) {
+
+                }
+            });
+        })
+    });
+    function editAva(){
+        $('.cropbox').show();
+        $('.cropboxbg').show()
+    }
+    function editAvaClose(){
+        $('.cropbox').hide();
+        $('.cropboxbg').hide()
+    }
+</script>
+</body>
+</html>

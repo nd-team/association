@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的人脉</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/mycontacts.css">
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="logo">
+            <a href="../index.html"></a>
+        </div>
+        <div class="user">
+            <ul class="menu">
+                <li>
+                    <a href="javascript:void(0)" class="logout">退出</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="set"></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)" class="news"><i>20</i></a>
+                </li>
+            </ul>
+            <div class="username">
+                <a href="javascript:void(0)">宋小宝</a>
+            </div>
+            <div class="avatar">
+                <a href="javascript:void(0)"><img src="../../images/crowd/avatar.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</header>
+<nav>
+    <div class="wrap">
+        <ul>
+            <li>
+                <a href="./mine.html">主页</a>
+            </li>
+            <li class="active">
+                <a href="./material.html">资料</a>
+            </li>
+            <li>
+                <a href="./mycontacts.html">我的人脉</a>
+            </li>
+            <li>
+                <a href="./myrecom.html">我要推荐</a>
+            </li>
+        </ul>
+        <div class="search">
+            <select>
+                <option value="">全站</option> <option value="">全网</option>
+            </select>
+            <input type="text" placeholder="请输入搜索内容">
+        </div>
+    </div>
+</nav>
+<div class="container bg">
+    <div class="wrap">
+        <div class="nav-left">
+            <div class="sidebar">
+                <h2><a href="./mycontacts.html" >资料</a></h2>
+                <ul class="meterial-nav">
+                    <li data-tab="self">
+                        <a href="javascript:void(0)" class="active">个人资料</a>
+                    </li>
+                    <li data-tab="more">
+                        <a href="javascript:void(0)">更多资料</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section-right nobg">
+            <section class="tab self">
+                <div class="section-title">
+                    <h3>个人资料</h3>
+                </div>
+                <div class="section-con">
+                    <form >
+                        <div class="form-groud">
+                            <p><label><i>*</i>昵称</label><input type="text" placeholder="输入昵称"></p>
+                        </div>
+                        <div class="form-groud">
+                            <p><label>账号</label><span>123</span>
+                        </div>
+                        <div class="form-groud">
+                            <div class="sex-span"><label><i>*</i>性别</label>
+                                <span >
+                                <input type="radio" name="sex" id="man" checked><label for="man" class="sex"></label>男
+                                <input type="radio" name="sex" id="woman"><label for="woman" class="sex"></label>女
+                            </span>
+                            </div>
+                        </div>
+                        <div class="form-groud">
+                            <p><label><i>*</i>电话</label><input type="text" placeholder="输入电话号码"></p>
+                        </div>
+                        <div class="form-groud">
+                            <div>
+                                <label><i>*</i>地址</label>
+                                <select><option value="">省份</option></select>
+                                <select><option value="">地级市</option></select>
+                                <select><option value="">县级</option></select>
+                            </div>
+                        </div>
+                        <div class="form-groud">
+                            <div>
+                                <label><i>*</i>生日</label>
+                                <select><option value="">年</option></select>
+                                <select><option value="">月</option></select>
+                                <select><option value="">日</option></select>
+                            </div>
+                        </div>
+                        <div class="form-groud">
+                            <p><label>年龄</label><input type="text" placeholder="输入昵称"></p>
+                        </div>
+                        <div class="form-groud">
+                            <p><label>推荐人</label><span>王博文</span>
+                        </div>
+                        <div class="form-groud">
+                            <p><label>认领人</label><span>王博文</span>
+                        </div>
+                        <button class="save">保存</button>
+                    </form>
+                </div>
+            </section>
+            <section class="tab more">
+                <div class="section-title">
+                    <h3>更多资料</h3>
+                </div>
+                <div class="section-con">
+                    <form >
+                        <div class="form-groud">
+                            <p><label><i>*</i>姓名</label><input type="text" placeholder="输入姓名"></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud">
+                            <p><label><i>*</i>QQ</label><input type="text" placeholder="输入QQ"></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud">
+                            <p><label><i>*</i>微信</label><input type="text" placeholder="输入微信"></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud">
+                            <p class="hobby"><label><i>*</i>爱好</label>
+                                <span>
+                                    <a href="javascript:void(0)">跳舞</a>
+                                    <a href="javascript:void(0)" class="active">围棋</a>
+                                    <a href="javascript:void(0)">钢琴</a>
+                                    <a href="javascript:void(0)">跳舞</a>
+                                    <a href="javascript:void(0)" class="active">围棋</a>
+                                    <a href="javascript:void(0)">钢琴</a>
+                                    <a href="javascript:void(0)">跳舞</a>
+                                    <a href="javascript:void(0)" class="active">围棋</a>
+                                    <a href="javascript:void(0)">钢琴</a>
+                                </span>
+                            </p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud">
+                                <p><label><i>*</i>毕业学校</label><input type="text" placeholder="输入毕业学校"></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud">
+                            <p><label><i>*</i>星座</label>
+                                <select name="" id=""><option value="">白羊座</option></select></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud">
+                            <p><label><i>*</i>血型</label><input type="text" placeholder="输入血型"></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud">
+                            <p><label><i>*</i>公司</label><input type="text" placeholder="输入公司"></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud">
+                            <p><label><i>*</i>职位</label><input type="text" placeholder="输入公司职位"></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud">
+                            <p><label><i>*</i>婚姻状况</label>
+                                <select name="" onchange="marriage(this)"><option value="0">未婚</option> <option value="1">已婚</option></select></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud marriage">
+                            <p><label><i>*</i>配偶姓名</label><input type="text" placeholder="输入配偶姓名"></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud marriage">
+                            <p><label><i>*</i>子女姓名</label><input type="text" placeholder="输入子女姓名"></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <div class="form-groud marriage">
+                            <p><label><i>*</i>就读学校</label><input type="text" placeholder="输入就读学校"></p>
+                            <select class="switch"><option value="">公开</option><option value="">非公开</option></select>
+                        </div>
+                        <button class="save">保存</button>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="wrap">
+        <ul>
+            <li>关于社区</li>
+            <li>法律声明</li>
+            <li>合作伙伴</li>
+            <li>联系我们</li>
+        </ul>
+        <p>Copyright &copy; 2009-2017 BEIJINGAIJIATIANCHENG 北京艾佳天诚信息技术有限公司</p>
+    </div>
+</footer>
+
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../js/common.js"></script>
+<script>
+    $('.meterial-nav li').on("click",function(){
+        var tab = $(this).attr('data-tab');
+        $(this).children().addClass('active').parent().siblings().children().removeClass('active');
+        $('.section-right .tab.'+tab).show().siblings().hide()
+    });
+    function marriage(self){
+        var isMarr = $(self).val();
+        if(isMarr=='1'){
+            $(self).parents('form').children('.marriage').css('display','flex');
+        }else {
+            $(self).parents('form').children('.marriage').hide()
+        }
+    }
+</script>
+</body>
+</html>

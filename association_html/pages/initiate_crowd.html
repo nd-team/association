@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>发起众筹一</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/initiate_crowd.css">
+    <link rel="stylesheet" href="../plug/wangEditor/css/wangEditor.css">
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="logo">
+            <a href="./index.html"></a>
+            首页
+        </div>
+        <div class="user">
+            <div class="username">
+                <a href="javascript:void(0)">宋小宝</a>
+            </div>
+            <div class="avatar">
+                <a href="javascript:void(0)"><img src="../images/crowd/avatar.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="editext-wrap">
+    <div class="step">
+        <ul class="step-4 ">
+            <li class="current veri"><span><i>1</i></span>
+                <p>基本信息</p>
+            </li>
+            <li class="info"><span><i>2</i></span>
+                <p>项目信息</p>
+            </li>
+            <li class="editext"><span><i>3</i></span>
+                <p>项目详情</p>
+            </li>
+            <li class="commodity"><span><i>4</i></span>
+                <p>回报设置</p>
+            </li>
+        </ul>
+        <ul class="step-3 show">
+            <li class="current info"><span><i>1</i></span>
+                <p>项目信息</p>
+            </li>
+            <li class="editext"><span><i>2</i></span>
+                <p>项目详情</p>
+            </li>
+            <li class="commodity"><span><i>3</i></span>
+                <p>回报设置</p>
+            </li>
+        </ul>
+        <em class="line"></em>
+        <button class="preview-btn">预览</button>
+    </div>
+    <div class="container release">
+        <form id="signupForm">
+            <div class=" crowd-type">
+                <h2>请选择你的众筹类型</h2>
+                <ul class="type-list">
+                    <li class="active">
+                        <label for="product">
+                            <h3>产品众筹</h3>
+                            <strong>需要设置截止时间，并向支持者发放回报</strong>
+                            <p>审核通过后再平台展示</p>
+                            <p>做一定时间内到达金额才算众筹成功</p>
+                        </label>
+
+                    </li>
+                    <li>
+                        <label for="help">
+                            <h3>求助众筹</h3>
+                            <strong>需要设置截止时间，并向支持者发放回报</strong>
+                            <p>审核通过后再平台展示</p>
+                            <p>做一定时间内到达金额才算众筹成功</p>
+                        </label>
+
+                    </li>
+                </ul>
+                <input type="radio" id="product" name="type"> <input type="radio" id="help" name="type">
+                <div class="btn">
+                    <a href="javascript:void(0)" data-index="typenext">下一步</a>
+                </div>
+            </div>
+            <!--<div class="item veri">-->
+                <!--<h2>身份验证</h2>-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" placeholder="输入中文姓名" name="username"> <span class="required">* 请输入您的真实姓名</span>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" placeholder="输入二代身份证号码" name="idcard"><span class="required">* 请输入您的身份证号码</span>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" placeholder="手机号码" name="phone"><span class="required">* 请输入您的手机号码</span>-->
+                <!--</div>-->
+                <!--<div class="btn">-->
+                    <!--<a href="javascript:void(0)" data-index="typeprev">上一步</a>-->
+                    <!--<a href="javascript:void(0)" data-index="info">下一步</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="item info">
+                <h2>项目信息</h2>
+                <div class="form-group">
+                    <p class="tit">设置封面：</p>
+                    <div class="con">
+                        <p class="row">
+                            <input type="file" onchange="handleFiles(this)" id="file">
+                            <label for="file" class="imgfile"><img class="img" src="../images/crowd/file.png" alt=""></label>
+                            <span class="msg">建议册寸大小1200*520，图片大小不超过5M</span>
+                        </p>
+                        <p class="required">*请上传项目封面</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p class="tit">项目标题：</p>
+                    <div class="con">
+                        <input type="text" placeholder="起个响亮的标题吧" name="item-title">
+                        <p class="required">*请填写项目标题</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p class="tit">众筹目的：</p>
+                    <div class="con">
+                        <textarea placeholder="请填写众筹目的" name="objective"></textarea>
+                        <p class="required">*请填写众筹目的</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p class="tit">众筹金额：</p>
+                    <div class="con">
+                        <input type="text" placeholder="输入您要众筹的金额，最少500" name="money"> 元
+                        <p class="required">*请填写众筹金额(整数)</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p class="tit">众筹天数：</p>
+                    <div class="con">
+                        <input type="text" placeholder="输入您要众筹的天数" name="day"> 天
+                        <p class="required">*请填写众筹天数</p>
+                    </div>
+                </div>
+                <div class="btn">
+                    <a href="javascript:void(0)" data-index="veri">上一步</a>
+                    <a href="javascript:void(0)" data-index="editext">下一步</a>
+                </div>
+
+            </div>
+            <div class="item editext">
+                <h2>项目详情</h2>
+                <div id="editor-container">
+                    <div id="textareaBox"></div>
+                </div>
+                <div class="btn">
+                    <a href="javascript:void(0)" data-index="info">上一步</a>
+                    <a href="javascript:void(0)" data-index="commodity">下一步</a>
+                </div>
+            </div>
+            <div class="item commodity">
+                <h2>回报设置</h2>
+                <div class="commod-list">
+                    <div class="commod">
+                        <h4>商品1</h4>
+                        <div class="item-form">
+                            <div class="form-group">
+                                <p class="tit">支持金额：</p>
+                                <div class="con">
+                                    <input type="text" placeholder="输入用户支持的金额" name="comMoney1"> 元
+                                    <p class="required">*请填写支持金额</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="tit">商品标题：</p>
+                                <div class="con">
+                                    <input type="text" placeholder="输入商品标题" name="comTitle1">
+                                    <p class="required">*请填写商品标题</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="tit">商品内容：</p>
+                                <div class="con">
+                                    <textarea placeholder="请填写商品内容"></textarea>
+                                    <p class="required">*请填写商品内容</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="tit">人数限制：</p>
+                                <div class="con">
+                                    <p class="row">
+                                        <input type="number" placeholder="0" name="comPerson1"> <span>0为不限制</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="tit">发货时间：</p>
+                                <div class="con">
+                                    <p class="row">
+                                        <input type="number" placeholder="0" name="comTime1"> <span>0为项目结束后立即发货</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="s-btn">
+                                <a href="javascript:void(0)" onclick="comSubDel(this)">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commod">
+                        <h4>商品2</h4>
+                        <div class="item-form">
+                            <div class="form-group">
+                                <p class="tit">支持金额：</p>
+                                <div class="con">
+                                    <input type="text" placeholder="输入用户支持的金额" name="comMoney2"> 元
+                                    <p class="required">*请填写支持金额</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="tit">商品标题：</p>
+                                <div class="con">
+                                    <input type="text" placeholder="输入商品标题" name="comTitle2">
+                                    <p class="required">*请填写商品标题</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="tit">商品内容：</p>
+                                <div class="con">
+                                    <textarea placeholder="请填写商品内容"></textarea>
+                                    <p class="required">*请填写商品内容</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="tit">人数限制：</p>
+                                <div class="con">
+                                    <p class="row">
+                                        <input type="number" placeholder="0" name="comPerson2"> <span>0为不限制</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <p class="tit">发货时间：</p>
+                                <div class="con">
+                                    <p class="row">
+                                        <input type="number" placeholder="0" name="comTime2"> <span>0为项目结束后立即发货</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="s-btn">
+                                <a href="javascript:void(0)" onclick="comSubDel(this)">删除</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="add">
+                    <a href="javascript:void(0)" onclick="addCommod()">继续添加商品</a>
+                </div>
+                <div class="btn">
+                    <a href="javascript:void(0)" data-index="editext">上一步</a>
+                    <a href="javascript:void(0)">提交审核</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="preview">
+    <nav>
+        <div class="wrap">
+            <ul>
+                <li class="active">
+                    <a href="javascript:void(0)">首页</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">众筹</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">灵感贩卖</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">干货分享</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">求助中心</a>
+                </li>
+            </ul>
+            <div class="search">
+                <select>
+                    <option value="">全站</option> <option value="">全网</option>
+                </select>
+                <input type="text" placeholder="请输入搜索内容">
+            </div>
+        </div>
+    </nav>
+    <div class="banner_inside">
+        <div class="wrap">
+            <img src="../images/crowd/fengmian.jpg" alt="">
+            <div class="banner_text">
+                <h2>松枝煮茶，溢满鱼香，海天一色处是吾家</h2>
+                <p class="msg">依山傍海的老石屋改建而成，推开窗就能看见盘山而过的沿海绿道和对面的金沙滩，更远处是海面上若隐若现海岛和渔船，静溢优美的景色让人不知不觉的静下心来。</p>
+                <div class="user">
+                    <img src="../images/crowd/avatar03.png" alt="">
+                    <p>小牛奶</p>
+                    <span>2017.03.14</span> <span>12:00</span>
+                </div>
+            </div>
+            <div class="remain_day">
+                剩余天数：<span>25</span>天
+            </div>
+            <div class="banner_modal">
+                <button class="return-btn">返回</button>
+            </div>
+        </div>
+    </div>
+    <div class="inside-con">
+        <div class="wrap">
+            <section class="left">
+                <div class="progress">
+                    <div class="money">
+                        <p>众筹金额：￥<span>4380</span></p>
+                        <p>众筹总金额：￥<span class="allmoney">13800</span></p>
+                    </div>
+                    <div class="bar">
+                        <i></i> <span class="percent">50%</span>
+                    </div>
+                    <div class="follow">
+                        <a href="javascript:void(0)" class="followed"></a>
+                        <span>1200</span>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="pro-tit">
+                        <i></i>
+                        <h3>项目叙述</h3>
+                    </div>
+                    <div class="pro-con">
+                        <p class="fz16">我的全部野心，是创造产生幸福的空间</p>
+                        <p>我是赖旭东，室内设计师，一个重庆生活多年的四川人。</p>
+                        <p>我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。</p>
+                        <img src="../images/crowd/pic01.png" alt="">
+                        <p>我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。</p>
+                        <h5>但是吃了这么多年的老火锅，我却一直有一种烦恼</h5>
+                        <p>我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。</p>
+                        <img src="../images/crowd/pic02.png" alt="">
+                        <p class="mg20">我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。</p>
+                        <p class="mg20">我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。</p>
+                        <p class="mg20">我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。我的全部野心，是创造产生幸福的空间，我是赖旭东，室内设计师，一个重庆生活多年的四川人。</p>
+                        <h3>每一天都是新的开始，希望一切的美好都能见涨</h3>
+                    </div>
+                </div>
+            </section>
+            <section class="right">
+                <div class="item">
+                    <div class="item-head">
+                        <a href="javascript:void(0)">￥28</a>
+                    </div>
+                    <h3>合家欢乐的麻辣时光</h3>
+                    <p>感谢您的支持！您将获得</p>
+                    <p>1、2张UPOI重庆老火锅私人合家豪华套餐一份（价值500元）</p>
+                    <p>2、3张UPOI重庆老火锅私人合家豪华套餐一份（价值1500元）</p>
+                    <div class="remain">
+                        <p>剩余名额 <span>无限制</span></p>
+                        <p>已有<i>10人</i>认筹</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-head">
+                        <a href="javascript:void(0)">￥28</a>
+                    </div>
+                    <h3>合家欢乐的麻辣时光</h3>
+                    <p>感谢您的支持！您将获得</p>
+                    <p>1、2张UPOI重庆老火锅私人合家豪华套餐一份（价值500元）</p>
+                    <p>2、3张UPOI重庆老火锅私人合家豪华套餐一份（价值1500元）</p>
+                    <div class="remain">
+                        <p>剩余名额 <span>无限制</span></p>
+                        <p>已有<i>10人</i>认筹</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-head">
+                        <a href="javascript:void(0)">￥28</a>
+                    </div>
+                    <h3>合家欢乐的麻辣时光</h3>
+                    <p>感谢您的支持！您将获得</p>
+                    <p>1、2张UPOI重庆老火锅私人合家豪华套餐一份（价值500元）</p>
+                    <p>2、3张UPOI重庆老火锅私人合家豪华套餐一份（价值1500元）</p>
+                    <div class="remain">
+                        <p>剩余名额 <span>无限制</span></p>
+                        <p>已有<i>10人</i>认筹</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-head">
+                        <a href="javascript:void(0)">￥28</a>
+                    </div>
+                    <h3>合家欢乐的麻辣时光</h3>
+                    <p>感谢您的支持！您将获得</p>
+                    <p>1、2张UPOI重庆老火锅私人合家豪华套餐一份（价值500元）</p>
+                    <p>2、3张UPOI重庆老火锅私人合家豪华套餐一份（价值1500元）</p>
+                    <div class="remain">
+                        <p>剩余名额 <span>无限制</span></p>
+                        <p>已有<i>10人</i>认筹</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+<footer>
+    <div class="wrap">
+        <ul>
+            <li>关于社区</li>
+            <li>法律声明</li>
+            <li>合作伙伴</li>
+            <li>联系我们</li>
+        </ul>
+        <p>Copyright &copy; 2009-2017 BEIJINGAIJIATIANCHENG 北京艾佳天诚信息技术有限公司</p>
+    </div>
+</footer>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../plug/wangEditor/js/wangEditor.js"></script>
+<script src="../js/jquery.validate.min.js"></script>
+<script src="../js/crowd_funding.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".crowd-type").on("click","li",function(){
+            if(!$(this).hasClass('active')){
+                $(this).addClass('active').siblings().removeClass('active')
+            }
+        })
+    });
+
+    var editor = new wangEditor('textareaBox');
+    // 上传图片（举例）
+    editor.config.uploadImgUrl = 'file.php';
+    // 配置自定义参数（举例）
+    editor.config.uploadParams = {
+        token: 'abcdefg',
+        user: 'wangfupeng1988'
+    };
+    // 设置 headers（举例）
+    editor.config.uploadHeaders = {
+        'Accept' : 'text/x-json'
+    };
+    // 隐藏掉插入网络图片功能。该配置，只有在你正确配置了图片上传功能之后才可用。
+    editor.config.hideLinkImg = true;
+    editor.create();
+</script>
+</body>
+</html>

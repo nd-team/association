@@ -1,0 +1,685 @@
+body {
+  background: #f5f5f5;
+}
+
+button {
+  outline: none;
+}
+
+.clear:after {
+  display: block;
+  content: "";
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.banner {
+  width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  .left {
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 210px;
+    float: left;
+    background: #fff;
+    margin-top: 10px;
+    .title {
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-left: 6px solid #0ec891;
+      padding-left: 24px;
+      margin-top: 16px;
+      margin-bottom: 5px;
+    }
+    .ul_1 {
+      margin-bottom: 28px;
+      li {
+        list-style: disc;
+        font-size: 14px;
+        margin-left: 45px;
+        line-height: 38px;
+        a {
+          display: block;
+          color: #666666;
+          margin-left: -6px;
+        }
+      }
+    }
+    .title2 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333333;
+      border-left: 6px solid #0ec891;
+      padding-left: 24px;
+      line-height: 24px;
+      margin-bottom: 4px;
+    }
+  }
+  .center {
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 600px;;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    .theme {
+      margin-top: 10px;
+      background: #ffffff;
+      text-align: center;
+      line-height: 46px;
+      button {
+        margin-left: 10px;
+        margin-top: 10px;
+        float: left;
+        height: 25px;
+        width: 27px;
+        background: url("../images/chat/chat-button.jpg") no-repeat center;
+        border: 0;
+      }
+      a {
+        float: right;
+        margin-right: 10px;
+      }
+      span {
+        font-weight: bold;
+        font-size: 16px;
+        color: #333333;
+      }
+
+    }
+    ul {
+      li {
+        margin-top: 14px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background: #fff;
+        .img {
+          float: left;
+          width: 104px;
+          height: 104px;
+          margin-left: 14px;
+        }
+        div {
+          margin-left: 128px;
+          h4 {
+            margin-top: 9px;
+            a {
+              font-size: 16px;
+              font-weight: bold;
+              color: #333333;
+            }
+            span {
+              float: right;
+
+              width: 60px;
+              border-radius: 13px 0 0 13px;
+              background: #f37394;
+              text-align: center;
+              line-height: 26px;
+              color: #fff;
+              font-weight: normal;
+            }
+          }
+          .address {
+            margin-top: 5px;
+            font-size: 14px;
+          }
+          .time {
+            font-size: 14px;
+          }
+          .simple_introduce {
+            font-size: 14px;
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+
+  }
+  .right {
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    float: left;
+    width: 250px;
+    background: #ffffff;
+    margin-top: 10px;
+    .search {
+      input {
+        border: 1px solid #cccccc;
+        width: 215px;
+        height: 30px;
+        margin: 10px 10px 13px 10px;
+        color: #999999;
+        padding-left: 15px;
+      }
+    }
+    .btn {
+      border-bottom: 1px solid #cccccc;
+      border-top: 1px solid #cccccc;
+      width: 250px;
+      a {
+        display: block;
+        float: left;
+        width: 124px;
+        color: #666666;
+        line-height: 32px;
+        text-align: center;
+        border-right: 2px solid #cccccc;
+        &:last-child {
+          border-right: 0;
+        }
+      }
+    }
+
+    ul {
+      margin-top: 20px;
+      li {
+        margin-left: 18px;
+        margin-bottom: 10px;
+        img, a {
+          display: block;
+          float: left;
+        }
+        img {
+          height: 34px;
+          width: 34px;
+        }
+        a {
+          line-height: 34px;
+          font-size: 14px;
+          color: #666666;
+          margin-left: 12px;
+        }
+      }
+    }
+
+  }
+
+}
+
+.shade {
+   display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9;
+}
+
+._alert {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  margin-left: -308px;
+  z-index: 12;
+  background: #FFFFFF;
+  width: 616px;
+  height: 512px;
+  .title {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid #cccccc;
+    button {
+      float: right;
+      width: 18px;
+      height: 18px;
+      background: url("../images/close.png") no-repeat center;
+      margin-top: 11px;
+      margin-right: 14px;
+    }
+  }
+  div {
+    .left {
+      float: left;
+      background: #f0f0f0;
+      border: 1px solid #cccccc;
+      width: 180px;
+      height: 110px;
+      font-size: 16px;
+      color: #666666;
+      line-height: 110px;
+      text-align: center;
+      margin-top: 10px;
+      margin-left: 12px;
+    }
+    .right {
+      margin-left: 204px;
+      .activity {
+        margin-top: 10px;
+        font-size: 12px;
+        color: #666666;
+        input {
+          margin-left: 5px;
+          padding-left: 9px;
+          font-size: 12px;
+          height: 30px;
+          width: 340px;
+          border: 1px solid #cccccc;
+
+        }
+      }
+
+      .activity_time {
+        font-size: 12px;
+        margin-top: 14px;
+        line-height: 32px;
+        overflow: hidden;
+        color: #666666;
+        span, input, div {
+          float: left
+        }
+        .kong {
+          text-align: center;
+          width: 10px;
+        }
+        input {
+          margin-left: 5px;
+          height: 30px;
+          width: 90px;
+          padding-left: 9px;
+          font-size: 12px;
+          border: 1px solid #cccccc;
+          border-right: 0;
+          background: url("../images/claim/option.jpg") right center no-repeat;
+        }
+      }
+      .stop {
+        margin-top: 14px;
+      }
+      .address {
+        position: relative;
+        margin-top: 14px;
+        font-size: 12px;
+        color: #666666;
+        div {
+          display: none;
+          border: 1px solid #cccccc;
+          position: absolute;
+          top: 32px;
+          left: 53px;
+          line-height: 28px;
+          height: 28px;
+          width: 250px;
+          padding-left: 20px;
+          border-top: 0;
+          background: url("../images/chat/addbg.jpg") no-repeat 8px center;
+        }
+        input {
+          font-size: 12px;
+          margin-left: 5px;
+          padding-left: 10px;
+          height: 30px;
+          width: 260px;
+          border: 1px solid #cccccc;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .simple {
+    line-height: 28px;
+    font-size: 12px;
+    margin-left: 12px;
+    margin-top: 12px;
+    color: #666666;
+  }
+  .content {
+    height: 184px;
+    width: 594px;
+    border: 1px solid #cccccc;
+    margin: 0 auto;
+    .content_t {
+      height: 156px;
+    }
+    /*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+    .content_t::-webkit-scrollbar {
+      width: 6px;
+      height: 16px;
+      background-color: #f5f5f5;
+    }
+    /*定义滚动条的轨道，内阴影及圆角*/
+    .content_t::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+      border-radius: 10px;
+      background-color: #f5f5f5;
+    }
+    /*定义滑块，内阴影及圆角*/
+    .content_t::-webkit-scrollbar-thumb {
+      /*width: 10px;*/
+      height: 20px;
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+      background-color: #cccccc;
+    }
+
+    .content_b {
+      line-height: 28px;
+      button {
+        width: 90px;
+        height: 26px;
+        border: 0;
+        color: #333333;
+        font-size: 12px;
+        padding-left: 30px;
+        margin-left: 10px;
+        background: #ffffff url("../images/chat/imgbtn.png") no-repeat left center;
+      }
+      span {
+        color: #999;
+      }
+    }
+  }
+  .button {
+    height: 30px;
+    width: 100px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #FFFFFF;
+    background: #f27394;
+    margin-top: 6px;
+    margin-left: 493px;
+  }
+
+  .select {
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: none;
+    border: 1px solid #ccc;
+    outline: none;
+    -webkit-appearance: none;
+    padding: 0 5px;
+    line-height: inherit;
+    color: inherit;
+    cursor: default;
+    font-size: 14px;
+    position: relative;
+    z-index: 3;
+  }
+  #select option {
+    color: #999999;
+  }
+  #select option:hover {
+    color: #fff;
+  }
+  #select option:checked {
+    background: #10db9f;
+    color: #fff;
+  }
+  .selectStyle {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 32px;
+    width: 68px;
+    border-radius: 0;
+    background: #ffffff url("../images/claim/option.jpg") right center no-repeat;
+    background-size: auto 80%;
+    color: #333;
+    line-height: 2;
+  }
+
+}
+
+#baiMap {
+  display: none;
+  height: 512px;
+  width: 614px;
+  z-index: 13;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  background: #ffffff;
+  margin-left: -307px;
+  p {
+    height: 40px;
+    border-bottom: 2px solid #cccccc;
+    .b_left {
+      background: #ffffff url("../images/chat/back.jpg") no-repeat left center;
+      padding-left: 24px;
+      height: 22px;
+      color: #0dc893;
+      float: left;
+      margin-top: 9px;
+      margin-left: 12px;
+    }
+    .b_right {
+      float: right;
+      background: #FFFFFF url("../images/chat/close.png") no-repeat right center;
+      height: 16px;
+      width: 16px;
+      margin-top: 12px;
+      margin-right: 14px;
+
+    }
+  }
+  .input {
+    z-index: 33;
+    position: absolute;
+    height: 30px;
+    width: 325px;
+    padding-left: 15px;
+    background: #fff;
+    top: 48px;
+    left: 85px;
+  }
+  .button {
+    z-index: 33;
+    height: 30px;
+    width: 80px;
+    color: #fff;
+    background: #0ec891;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 48px;
+    left: 450px;
+  }
+
+  #maps {
+    height: 512-42px;
+    width: 614px;
+    overflow: hidden;
+  }
+
+}
+
+.build_vote {
+  width: 614px;
+  z-index: 12;
+  background: #fff;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  margin-left: -307px;
+  .title {
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid #cccccc;
+    button {
+      float: right;
+      width: 18px;
+      height: 18px;
+      background: url("../images/close.png") no-repeat center;
+      margin-top: 11px;
+      margin-right: 14px;
+    }
+  }
+  .name {
+    margin-top: 14px;
+    span {
+      float: left;
+      font-size: 12px;
+      color: #666666;
+      margin-left: 34px;
+      margin-right: 6px;
+      margin-top: 5px;
+    }
+    textarea {
+      padding: 6px;
+      height: 60px;
+      width: 389px;
+    }
+    .right {
+      float: right;
+      border: 1px solid #aaaaaa;
+      background: #cccccc;
+      height: 72px;
+      width: 72px;
+      margin-right: 14px;
+      line-height: 72px;
+      text-align: center;
+    }
+  }
+  .option {
+    margin-top: 17px;
+    span {
+      float: left;
+      font-size: 12px;
+      color: #666666;
+      margin-left: 34px;
+      margin-right: 6px;
+      margin-top: 5px;
+    }
+    ul {
+      margin-left: 89px;
+
+      li {
+        margin-bottom: 10px;
+        input {
+          border: 1px solid #cccccc;
+          width: 390px;
+          height: 30px;
+          padding-left: 10px;
+        }
+        button {
+          height: 16px;
+          width: 16px;
+          margin-left: 5px;
+          background: #FFFFFF url("../images/chat/close.png") no-repeat center;
+        }
+      }
+    }
+    .add {
+      font-size: 12px;
+      color: #f11d1d;
+      padding-left: 18px;
+      margin-left: 89px;
+      margin-top: -3px;
+      background: #fff url("../images/chat/add.jpg") no-repeat left center;
+    }
+  }
+  .pattern {
+    margin-top: 22px;
+    margin-left: 34px;
+    font-size: 12px;
+    color: #666666;
+    span, div {
+      float: left;
+      font-size: 12px;
+      color: #666666;
+    }
+    div {
+      margin-right: 20px;
+      &:first-child {
+        margin-left: 10px;
+      }
+      div {
+        float: left;
+        margin-right: 5px;
+        border-radius: 50%;
+        border: 1px solid #cccccc;
+        width: 15px;
+        height: 15px;
+      }
+      input[type='radio'] {
+        display: none;
+      }
+
+    }
+    input {
+      border: 1px solid #cccccc;
+      height: 18px;
+      padding: 0 4px;
+      width: 30px;
+      margin: 0 3px;
+    }
+
+  }
+  .vote_end {
+    font-size: 12px;
+    color: #666;
+    line-height: 32px;
+    margin-left: 34px;
+    margin-top: 14px;
+    span, input, div {
+      float: left;
+    }
+    input {
+      margin-left: 10px;
+      height: 30px;
+      width: 87px;
+      padding-left: 10px;
+      border: 1px solid #cccccc;
+      background: #ffffff url("../images/claim/option.jpg") right center no-repeat;;
+    }
+  }
+  .select {
+    padding-left: 8px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: none;
+    border: 1px solid #ccc;
+    outline: none;
+    -webkit-appearance: none;
+    padding: 0 5px;
+    line-height: inherit;
+    color: inherit;
+    cursor: default;
+    font-size: 14px;
+    position: relative;
+    z-index: 3;
+  }
+  .selectStyle {
+    display: block;
+    margin-left: 8px;
+    overflow: hidden;
+    height: 32px;
+    width: 68px;
+    border-radius: 0;
+    background: #ffffff url("../images/claim/option.jpg") right center no-repeat;
+    background-size: auto 80%;
+    color: #333;
+    line-height: 2;
+  }
+  .build_btn{
+  button{
+    height: 30px;
+    width: 100px;
+    background: #f27394;
+    color: #FFFFFF;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-left: 480px;
+    margin-bottom: 20px;
+  }}
+}
+
+
+

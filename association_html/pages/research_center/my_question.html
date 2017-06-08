@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的问卷</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/my_question.css">
+</head>
+<body>
+<div class="fixed_left">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</div>
+<div class="banner">
+    <div class="title">
+        <a href="javascript:void (0)">我的问卷</a>
+        <p><button>全部清空</button></p>
+    </div>
+    <div class="content">
+        <div class="li">
+            <h5>职业医生调查问卷<span>1份数据</span></h5>
+            <p>2017-04-11</p>
+            <div>
+                <a href="./edit_mode.html"></a>
+                <a href="./preview.html"></a>
+                <a href="javascript:void (0)"></a>
+                <span class="span1">编辑问卷<i></i></span>
+                <span class="span2">数据表报<i></i></span>
+                <span class="span3">删除<i></i></span>
+            </div>
+        </div>
+        <div class="li">
+            <h5>职业医生调查问卷<span>1份数据</span></h5>
+            <p>2017-04-11</p>
+            <div>
+                <a href="./edit_mode.html"></a>
+                <a href="./preview.html"></a>
+                <a href="javascript:void (0)"></a>
+                <span class="span1">编辑问卷<i></i></span>
+                <span class="span2">数据表报<i></i></span>
+                <span class="span3">删除<i></i></span>
+            </div>
+        </div>
+        <div class="li">
+            <h5>职业医生调查问卷<span>1份数据</span></h5>
+            <p>2017-04-11</p>
+            <div>
+                <a href="./edit_mode.html"></a>
+                <a href="./preview.html"></a>
+                <a href="javascript:void (0)"></a>
+                <span class="span1">编辑问卷<i></i></span>
+                <span class="span2">数据表报<i></i></span>
+                <span class="span3">删除<i></i></span>
+            </div>
+        </div>
+        <div class="li">
+            <h5>职业医生调查问卷<span>1份数据</span></h5>
+            <p>2017-04-11</p>
+            <div>
+                <a href="./edit_mode.html"></a>
+                <a href="./preview.html"></a>
+                <a href="javascript:void (0)"></a>
+                <span class="span1">编辑问卷<i></i></span>
+                <span class="span2">数据表报<i></i></span>
+                <span class="span3">删除<i></i></span>
+            </div>
+        </div>
+        <div class="li">
+            <h5>职业医生调查问卷<span>1份数据</span></h5>
+            <p>2017-04-11</p>
+            <div>
+                <a href="./edit_mode.html"></a>
+                <a href="./preview.html"></a>
+                <a href="javascript:void (0)"></a>
+                <span class="span1">编辑问卷<i></i></span>
+                <span class="span2">数据表报<i></i></span>
+                <span class="span3">删除<i></i></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="shade"></div>
+<div class='confirm_alert'>
+    <p>温馨提示<button>×</button></p>
+    <span>你确定删除这条数据吗？</span>
+    <div><button>取消</button><button>确定</button></div>
+</div>
+</body>
+</html>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.content .li div a:nth-child(1)').mouseenter(function () {
+      $(this).parent().find('.span1').css('display','block')
+    })
+    $('.content .li div a:nth-child(2)').mouseenter(function () {
+        $(this).parent().find('.span2').css('display','block')
+    })
+    $('.content .li div a:nth-child(3)').mouseenter(function () {
+        $(this).parent().find('.span3').css('display','block')
+    })
+    $('.content .li div a:nth-child(1)').mouseleave(function () {
+        $(this).parent().find('.span1').css('display','none')
+    })
+    $('.content .li div a:nth-child(2)').mouseleave(function () {
+        $(this).parent().find('.span2').css('display','none')
+    })
+    $('.content .li div a:nth-child(3)').mouseleave(function () {
+        $(this).parent().find('.span3').css('display','none')
+    })
+    $('.banner .title p button').click(function () {
+      $('.banner .content').empty()
+    })
+    $('.content .li div a:nth-child(3)').click(function () {
+     $('.shade,.confirm_alert').css('display','block')
+    })
+$('.confirm_alert p button').click(function () {
+    $('.shade,.confirm_alert').css('display','none')
+})
+    $('.confirm_alert div button:first-child').click(function () {
+        $('.shade,.confirm_alert').css('display','none')
+    })
+    $('.confirm_alert div button:last-child').click(function () {
+        $('.shade,.confirm_alert').css('display','none')
+    })
+</script>

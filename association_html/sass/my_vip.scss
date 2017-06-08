@@ -1,0 +1,56 @@
+button{
+  outline: none;
+}
+.banner{
+  width: 1100px;
+  margin: 0 auto;
+  .p1{
+    line-height: 44px;
+    a{margin-right: 15px;}
+  }
+   .p2{line-height: 49px;
+     height: 49px;
+     background:#fbfbfb ;
+     border: 1px solid #eeeeee;
+     border-left: 0;
+    a{
+      background: #ffffff;
+      font-size: 16px;
+      display: block;
+      height: 100%;
+      width: 110px;
+      text-align: center;
+      border-top:3px solid #0ec891;
+      border-right: 1px solid #eeeeee;
+    }
+   }
+ div{
+   background: #ffffff;
+   display: flex;
+   height: 468px;
+   margin-bottom: 50px;
+   div{
+     margin-left: 20px;
+     margin-top: 20px;
+     width: 220px;
+     height: 250px;
+     border: 1px solid #eeeeee;
+     border-radius: 5px;
+     background:url(../images/qiyevip.png) no-repeat center 39px;
+     &:nth-child(2){
+       background: url(../images/xinyevip.png) no-repeat center 39px;
+     }
+     &:nth-child(3){
+       background: url(../images/gerenvip.png) no-repeat center 39px;
+     }
+     button{
+       height: 34px;
+       width: 118px;
+     color: #ffffff;
+     background: #0ec891;
+     border-radius: 4px;
+       margin-top: 177px;
+     margin-left: 51px;}
+   }
+ }
+}
