@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>邀请码信息确认</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/confirmation.css">
+    <link rel="stylesheet" href="../../plug/pikaday/pikaday.css">
+    <link rel="stylesheet" href="../../plug/layer/skin/layer.css">
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="logo"><a href="./login.html"></a>信息确认</div>
+    </div>
+</header>
+<div id="determine">
+    <div class="wrap margin_bottom">
+        <ul>
+            <li>
+                <div class="input">
+                    <span class="tit">真实姓名</span><input type="text" placeholder="输入您的真实姓名" id="userId">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">电话号码</span><input type="text" placeholder="输入你的电话号码" id="mobile">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">性别</span>
+                    <div class="selectStyle">
+                        <select class="selected" id="sex">
+                            <option value="1">男</option>
+                            <option value="2">女</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+            <div class="love_style">
+                <span class="tit">爱好</span>
+                <div>
+                    <select class="love_select" id="love1">
+                        <option disabled selected value="">请选择</option>
+                        <option>跳舞</option>
+                        <option>唱歌</option>
+                        <option>画画</option>
+                        <option>钢琴</option>
+                        <option>看电影</option>
+                        <option>吃饭打豆豆</option>
+                        <option>潮流</option>
+                        <option>跳舞</option>
+                    </select>
+                    <select class="love_select" id="love2">
+                        <option disabled selected value="">请选择</option>
+                        <option>跳舞</option>
+                        <option>唱歌</option>
+                        <option>画画</option>
+                        <option>钢琴</option>
+                        <option>看电影</option>
+                        <option>吃饭打豆豆</option>
+                        <option>潮流</option>
+                        <option>跳舞</option>
+                    </select>
+                    <select class="love_select" id="love3">
+                        <option disabled selected value="">请选择</option>
+                        <option>跳舞</option>
+                        <option>唱歌</option>
+                        <option>画画</option>
+                        <option>钢琴</option>
+                        <option>看电影</option>
+                        <option>吃饭打豆豆</option>
+                        <option>潮流</option>
+                        <option>跳舞</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="address_new">
+                <span class="tit">现住地址</span>
+                <div data-toggle="distpicker" id="selectStyle_op" class="clear">
+                    <div class="selectStyle_op"><select data-province="选择省" class="select" id="xianjusheng"></select>
+                    </div>
+                    <div class="selectStyle_op"><select data-city="选择市" class="select" id="xianjushi"></select></div>
+                    <div class=" selectStyle_op"><select data-district="选择区" class="select" id="xianjuxian"></select>
+                    </div>
+                </div>
+                <input type="text" placeholder="请输入您的详细地址" id="xianjudizhi">
+            </div>
+            <li>
+                <div class="input">
+                    <span class="tit">生日</span><input type="text" id="start" placeholder="请选择您的出生日期">
+                </div>
+            </li>
+            <div class="address_old">
+                <span class="tit">籍贯</span>
+                <div data-toggle="distpicker" id="selectStyle_op" class="clear">
+                    <div class="selectStyle_op"><select data-province="选择省" class="select" id="jsheng"></select></div>
+                    <div class="selectStyle_op"><select data-city="选择市" class="select" id="jshi"></select></div>
+                    <div class="selectStyle_op"><select data-district="选择区" class="select" id="jxian"></select></div>
+                </div>
+            </div>
+
+            <div class="style_style">
+                <span class="tit">性格</span>
+                <select class="style_select" id="style1">
+                    <option disabled selected value="">请选择</option>
+                    <option>跳舞</option>
+                    <option>唱歌</option>
+                    <option>画画</option>
+                    <option>钢琴</option>
+                    <option>看电影</option>
+                    <option>吃饭打豆豆</option>
+                    <option>潮流</option>
+                    <option>跳舞</option>
+                </select>
+                <select class="style_select" id="style2">
+                    <option disabled selected value>请选择</option>
+                    <option>跳舞</option>
+                    <option>唱歌</option>
+                    <option>画画</option>
+                    <option>钢琴</option>
+                    <option>看电影</option>
+                    <option>吃饭打豆豆</option>
+                    <option>潮流</option>
+                    <option>跳舞</option>
+                </select>
+            </div>
+            <li>
+                <div class="input">
+                    <span class="tit">所属行业</span>
+                    <div class="selectStyle">
+                        <select id="industry" class="selected">
+                            <option value="1">其他</option>
+                            <option value="2">互联网</option>
+                            <option value="3">服务业</option>
+                            <option value="4">金融</option>
+                            <option value="5">教师</option>
+                            <option value="6">银行</option>
+                            <option value="7">医疗</option>
+                            <option value="8">房地产</option>
+                            <option value="9">贸易</option>
+                            <option value="10">物流</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">所在公司名称</span><input type="text" placeholder="输入您的所在公司名称" id="company">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">所在公司职位</span><input type="text" placeholder="输入您的所在公司职位" id="position">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">毕业院校</span> <input type="text" placeholder="输入您的毕业院校" id="finishSchool">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">毕业学历</span>
+                    <div class="selectStyle">
+                        <select class="selected" id="degree">
+                            <option value="1">初中</option>
+                            <option value="2">高中</option>
+                            <option value="3">中技</option>
+                            <option value="4">中专</option>
+                            <option value="5">大专</option>
+                            <option value="6">本科</option>
+                            <option value="7">硕士</option>
+                            <option value="8">博士</option>
+                            <option value="9">MBA</option>
+                            <option value="10">EMBA</option>
+                            <option value="11">其他</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">父亲</span><input type="text" placeholder="输入您的父亲姓名" id="fatherName">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">母亲</span><input type="text" placeholder="输入您的母亲姓名" id="motherName">
+                </div>
+            </li>
+            <li class="marriage">
+                <div class="input">
+                    <span class="tit">婚姻状况</span>
+                    <div class="selectStyle">
+                        <select class="selected" id="marriage">
+                            <option disabled selected value>请选择</option>
+                            <option value="1">已婚</option>
+                            <option value="0">未婚</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+            <li class="hello_word">
+                <div class="input"><span class="tit">配偶</span><input type="text" placeholder="输入您的配偶姓名" id="spouseName">
+                </div>
+            </li>
+            <li class="hello_word">
+                <div class="input"><span class="tit">子女</span> <input type="text" placeholder="输入您的子女姓名"
+                                                                      id="childrenName"></div>
+            </li>
+            <li class="hello_word">
+                <div class="input"><span class="tit">子女所就读学校</span><input type="text" placeholder="输入您的子女所就读学校"
+                                                                          id="childrenSchool"></div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">邮箱</span><input type="email" placeholder="输入您的邮箱" id="email">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">微信</span><input type="type" placeholder="输入您的微信" id="wechat">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">QQ</span><input type="type" placeholder="输入您的QQ" id="QQ">
+                </div>
+            </li>
+
+        </ul>
+        <div class="button_btn"><a href="javascript:void(0)">确 定</a></div>
+    </div>
+</div>
+<div class="shade"></div>
+<div class="a_alert">
+    <div class="a_top"><span>提示</span>
+        <button>×</button>
+    </div>
+    <p>信息确认后不能再修改<br>确认保存？</p>
+    <div class="btn_box">
+        <button>取消</button>
+        <button>确认</button>
+    </div>
+</div>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../plug/pikaday/moment.min.js"></script>
+<script src="../../plug/pikaday/pikaday.js"></script>
+<script src="../../plug/dist/distpicker.min.js"></script>
+<script src="../../js/login.js"></script>
+<script src="../../plug/layer/layer.js"></script>
+<script>
+    $('#determine .wrap ul .marriage .input .selectStyle .selected').click(function () {
+        if ($('#determine .wrap ul .marriage .input .selectStyle .selected').val() == '已婚') {
+            $('.hello_word').css('display', 'block')
+        }
+        else {
+            $('.hello_word').css('display', 'none')
+        }
+    })
+    $('.a_alert .a_top button').click(function () {
+        $('.a_alert,.shade').css('display', 'none')
+    })
+    $('.a_alert .btn_box button:first-child').click(function () {
+        $('.a_alert,.shade').css('display', 'none')
+    })
+    /* $('.button_btn').click(function () {
+     $('.a_alert,.shade').css('display', 'block')
+     })*/
+    //日历
+    var i18n = {
+        previousMonth: '上个月',
+        nextMonth: '下个月',
+        months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+        weekdays: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+        weekdaysShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+    }
+    var start = new Pikaday({
+        numberOfMonths: 1,
+        field: jQuery('#start')[0],
+        minDate: new Date('2000-01-01'),
+        maxDate: new Date('2020-12-31'),
+        yearRange: [2000, 2020],
+        i18n: i18n,
+        onSelect: function () {
+            var date = document.createTextNode(this.getMoment().format('YYYY-MM-DD') + ' ');
+        }
+    });
+</script>
+<script>
+
+    $('#love1').change(function () {
+        var love1 = $('#love1').val()
+        var love2 = $('#love2').val()
+        var love3 = $('#love3').val()
+        if(love1!=''&&love1==love2 || love1==love3 || love2==love3){
+            layer.alert("爱好不能一样", {icon: 5});
+        }
+    })
+    $('#love2').change(function () {
+        var love1 = $('#love1').val()
+        var love2 = $('#love2').val()
+        var love3 = $('#love3').val()
+        if(love1==love2 || love1==love3 || love2==love3&&love2!='请选择') {
+            layer.alert("爱好不能一样", {icon: 5});
+        }
+    })
+    $('#love3').change(function () {
+        var love1 = $('#love1').val()
+        var love2 = $('#love2').val()
+        var love3 = $('#love3').val()
+        if(love1==love2 || love1==love3 || love2==love3&&love2!='请选择') {
+            layer.alert("爱好不能一样", {icon: 5});
+        }
+    })
+
+
+
+
+
+    $('.button_btn a').click(function () {
+        var userId = $('#userId').val()          //姓名
+        var mobile = $('#mobile').val()          //电话（必填）
+        var sex = $('#sex').val()                //性别（必填）
+        var love1 = $('#love1').val()
+        var love2 = $('#love2').val()
+        var love3 = $('#love3').val()
+        if(love1==love2 || love1==love3 || love2==love3)
+        {
+            layer.alert("爱好不能一样", {icon: 5});
+        }
+        var hobby = love1 + ',' + love2 + ',' + love3   //爱好（必填）
+        var sheng = $('#xianjusheng').val()
+        //console.log(sheng)
+        var shi = $('#xianjushi').val()
+        //console.log(shi)
+        var xian = $('#xianjuxian').val()
+        //console.log(xian)
+        var dizhi = $('#xianjudizhi').val()
+        //console.log(dizhi)
+        var address = [sheng, shi, xian, dizhi]//现居地址（必填）
+        var born = $('#start').val()//生日
+        var jsheng = $('#jsheng').val()
+        var jshi = $('#jshi').val()
+        var jxian = $('#jxian').val()
+        var homeplace = [jsheng, jshi, jxian]//籍贯
+        var style1 = $('#style1').val()
+        var style2 = $('#style2').val()
+        var character = style1 + ',' + style2//性格
+        var industry = $('#industry').val()//所属行业
+        var finishSchool = $('#finishSchool').val()//毕业学校
+        var degree = $('#degree').val()//学历
+        var company = $('#company').val()//公司
+        var position = $('#position').val()//职位
+        var industry = $('#industry').val()//行业
+        var marriage = $('#marriage').val()//婚姻状况
+        var fatherName = $('#fatherName').val()//父亲姓名
+        var fatherName = $('#motherName').val()//父亲姓名
+        var spouseName = $('#spouseName').val()//配偶姓名
+        var childrenName = $('#childrenName').val()//子女姓名
+        var childrenSchool = $('#childrenSchool').val()//子女学校
+        var email = $('#email').val()//邮箱
+        var wechat = $('#wechat').val()//微信
+        var QQ = $('#QQ').val()//QQ
+        /*添加锁*/
+        var a = true;
+        var b = true
+        var c = true
+        var d = true
+        if (mobile == '' || mobile == undefined) {
+            layer.alert("电话号码不能为空", {icon: 5});
+            a = false;
+        }
+        if (sex == '' || sex == undefined) {
+            layer.alert("性别不能为空", {icon: 5});
+            b = false;
+        }
+        if (hobby == '' || hobby == undefined) {
+            layer.alert("爱好不能为空", {icon: 5});
+            c = false;
+        }
+        if (sheng == '' || sheng == undefined || shi == '' || shi == undefined || xian == '' || xian == undefined || dizhi == '' || dizhi == undefined) {
+            layer.alert("现居地址不能为空", {icon: 5});
+            d = false;
+        }
+        if (a && b && c && d) {
+            $('.a_alert,.shade').css('display', 'block')
+        }
+    })
+
+</script>
+
+</body>
+</html>

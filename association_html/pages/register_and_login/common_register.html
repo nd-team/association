@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>消息中心-站内信</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/common_register.css">
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="logo">
+            <a href="./index.html"></a>
+        </div>
+        <div class="title">普通用户注册</div>
+        <div class="owner">已有账号？<a href="./qr_code_and_username.html">请登录</a></div>
+    </div>
+</header>
+<div class="banner">
+    <div class="phone"><span>手机号码</span><input type="text" placeholder="请输入您的手机号"></div>
+    <div class="user_n"><span>昵称</span><input type="text" placeholder="请输入您的昵称"></div>
+    <div class="password"><span>密码</span><input type="text" placeholder="请输入您的密码"></div>
+    <div class="result"><div><span>验证码</span><input type="text" placeholder="请输入您的验证码"></div><button>发送验证码</button></div>
+    <p><span></span>阅读并同意<a href="javascript:void (0)">《社群联盟注册协议》</a><a href="javascript:void (0)">《隐私政策》</a></p>
+    <button class="button">确定</button>
+</div>
+<footer>
+    <div class="wrap">
+        <ul>
+            <li>关于社区</li>
+            <li>法律声明</li>
+            <li>合作伙伴</li>
+            <li>联系我们</li>
+        </ul>
+        <p>Copyright &copy; 2009-2017 BEIJINGAIJIATIANCHENG 北京艾佳天诚信息技术有限公司</p>
+    </div>
+</footer>
+</body>
+</html>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.banner .button').click(function () {
+       location.href='./determine.html'
+    })
+    var flag=true;
+    $('.banner p span').click(function () {
+        if(flag){
+            $('.banner p span').css('background','url(../../images/register_login/1212.png) no-repeat center')
+            flag=false;
+        }
+        else {
+            $('.banner p span').css('background','#ffffff')
+            flag=true;
+        }
+    })
+
+</script>

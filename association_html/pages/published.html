@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我要发表</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/published.css">
+    <link rel="stylesheet" href="../plug/wangEditor/css/wangEditor.css">
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="logo">
+            <a href="./index.html"></a>
+            首页
+        </div>
+        <div class="user">
+            <div class="username">
+                <a href="javascript:void(0)">宋小宝</a>
+            </div>
+            <div class="avatar">
+                <a href="javascript:void(0)"><img src="../images/crowd/avatar.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="wrap">
+        <h3>我要贩卖</h3>
+        <div class="content">
+            <div class="item">
+                <input type="file" id="updataimg" onchange="handleFiles(this)">
+                <label for="updataimg"><span>添加背景图</span></label>
+            </div>
+            <div class="item">
+                <input type="text" placeholder="请输入标题（30字以内）" maxlength="30">
+            </div>
+            <div class="item">
+                <div id="editor-container">
+                    <textarea id="editor-trigger" style="display:none;"></textarea>
+                </div>
+            </div>
+            <div class="item">
+                <textarea placeholder="做此输入的内容将被隐藏，作为贩卖商品"></textarea>
+            </div>
+            <div class="btn">
+                <button>预览</button>
+                <button class="publish-btn" onclick="publish()">发表</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal">
+    <div class="m-wrap enter">
+        <div class="m-con">
+            <p>请设置本站的贡献值数位
+                <input type="tel"> 个
+            </p>
+        </div>
+        <div class="m-btn" onclick="publishFail()">
+            <button>确定</button>
+        </div>
+    </div>
+    <div class="m-wrap fail">
+        <div class="m-con">
+            <p>对不起，您的贡献值不足，无法发表！</p>
+        </div>
+        <div class="m-btn">
+            <button onclick="leave()">狠心离开</button>
+        </div>
+    </div>
+</div>
+<div id="modalbg"></div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../plug/wangEditor/js/wangEditor.js"></script>
+<script src="../js/common.js"></script>
+<script type="text/javascript">
+
+    var elem = $('#editor-trigger').get(0);
+    // 通过 elem 创建编辑器
+    var editor = new wangEditor(elem);
+    // 上传图片
+    editor.config.uploadImgUrl = 'http://127.0.0.1/index.php';
+    // 表情显示项
+    editor.config.emotionsShow = 'value';
+    editor.create();
+</script>
+</body>
+</html>

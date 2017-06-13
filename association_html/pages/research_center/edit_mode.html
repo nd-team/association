@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的问卷</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/edit_mode.css">
+</head>
+<body>
+<div class="fixed_left">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</div>
+<div class="title">
+    <div class="top"><span class="span-1">企业员工满意度调查</span><span class="span-2">正在实时保存</span>
+        <div>
+            <button>预览问卷</button>
+            <button>发布问卷</button>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="left">
+            <h5>常用题型</h5>
+            <ul>
+                <li>单选题</li>
+                <li>多选题</li>
+                <li>填空题</li>
+            </ul>
+        </div>
+        <div class="right">
+            <h4><input type="text" value="企业员工满意度调查"></h4>
+            <p>添加问卷说明</p>
+            <div class="radio-box">
+                <p>01.<input type="text" value="单选题"></p>
+                <ul>
+                    <li><input type="radio" name="1"><input type="text" value="选项一"></li>
+                    <li><input type="radio" name="1"><input type="text" value="选项二"></li>
+                    <li><input type="radio" name="1"><input type="text" value="选项三"></li>
+                </ul>
+                <div><button class="btn1"></button><button class="btn2"></button><button class="btn3"></button></div>
+            </div>
+            <div class="check-box">
+                <p>02.<input type="text" value="多选题"></p>
+                <ul>
+                    <li><input type="checkbox" name="2"><input type="text" value="选项一"></li>
+                    <li><input type="checkbox" name="2"><input type="text" value="选项二"></li>
+                    <li><input type="checkbox" name="2"><input type="text" value="选项三"></li>
+                </ul>
+                <div><button class="btn1"></button><button class="btn2"></button><button class="btn3"></button></div>
+            </div>
+            <div class="tiankong">
+                <p>3.<input type="text" value="单行填空"></p>
+                <input class="input" type="text">
+                <div><button class="btn2"></button><button class="btn3"></button></div>
+            </div>
+            <p class="di1">页码：1/1</p>
+            <p class="di2">您已完成本次问卷，感谢您的帮助与支持！</p>
+        </div>
+    </div>
+</div>
+<div class="shade"></div>
+<div class='confirm_alert'>
+    <p>温馨提示<button>×</button></p>
+    <span>你确定发布吗？</span>
+    <div><button>取消</button><button>确定</button></div>
+</div>
+</body>
+</html>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.banner').on('focus','input[type=text]',function () {
+        $(this).css({'border': '1px solid #1be2a7', 'background': '#cefcee'})
+    })
+    $('.banner').on('blur','input[type=text]',function () {
+        $(this).css({'border': 0, 'background': '#ffffff'})
+    })
+  $('.banner').on('focus','.tiankong .input',function () {
+      $(this).css({'border': '1px solid #1be2a7', 'background': '#ffffff'})
+  })
+    $('.banner').on('blur','.tiankong .input',function () {
+        $(this).css({'border': '1px solid #eeeeee'})
+    })
+
+    $('.banner').on('click','.radio-box div .btn1',function () {
+       $('<li><input type="radio" name="1"><input type="text" value="选项三"></li>').appendTo($(this).parent().parent().find('ul'))
+    })
+    $('.banner').on('click','.radio-box div .btn2',function () {
+        $(this).parent().parent().remove()
+    })
+
+
+    $('.banner').on('click','.check-box div .btn1',function () {
+        $('<li><input type="checkbox" name="2"><input type="text" value="选项三"></li>').appendTo($(this).parent().parent().find('ul'))
+    })
+    $('.banner').on('click','.check-box div .btn2',function () {
+        $(this).parent().parent().remove()
+    })
+
+    $('.banner').on('click','.tiankong .btn2',function () {
+        $(this).parent().parent().remove()
+    })
+    $('.title .top div button:first-child').click(function () {
+       location.href='./question_preview.html'
+    })
+    $('.title .top div button:last-child').click(function () {
+        $('.shade,.confirm_alert').css('display','block')
+    })
+    $('.confirm_alert p button').click(function () {
+        $('.shade,.confirm_alert').css('display','none')
+    })
+    $('.confirm_alert div button:first-child').click(function () {
+        $('.shade,.confirm_alert').css('display','none')
+    })
+    $('.confirm_alert div button:last-child').click(function () {
+        location.href='./my_question.html'
+    })
+</script>

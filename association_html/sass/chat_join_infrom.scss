@@ -1,0 +1,336 @@
+body {
+  background: #f5f5f5;
+}
+
+.clear:after {
+  display: block;
+  content: "";
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+button{outline:none;}
+.banner {
+  width: 1100px;
+  margin: 0 auto 15px;
+  overflow: hidden;
+  .left {
+    padding-bottom: 2000px;
+    margin-bottom:-2000px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 210px;
+    float: left;
+    background: #fff;
+    margin-top: 10px;
+    .title {
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: bold;
+      border-left: 6px solid #0ec891;
+      padding-left: 24px;
+      margin-top: 16px;
+      margin-bottom: 5px;
+    }
+    .ul_1 {
+      margin-bottom: 28px;
+      li {
+        list-style: disc;
+        font-size: 14px;
+        margin-left: 45px;
+        line-height: 38px;
+        a {
+          display: block;
+          color: #666666;
+          margin-left: -6px;
+        }
+      }
+    }
+    .title2 {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333333;
+      border-left: 6px solid #0ec891;
+      padding-left: 24px;
+      line-height: 24px;
+      margin-bottom: 4px;
+    }
+  }
+  .center {
+    padding-bottom: 2000px;
+    margin:10px 20px -2000px 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 600px;;
+    float: left;
+    background: #ffffff;
+    .border_bottom{
+      border-bottom: 1px solid #cccccc;
+    }
+    .theme {
+      margin-top: 10px;
+      background: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333333;
+      line-height: 20px;
+      border-left: 6px solid #0ec891;
+      padding-left: 10px;
+
+      margin-bottom: 10px;
+      button{float: right;
+      background: #fff;
+      margin-right: 10px;
+        font-size: 12px;
+        color: #666666;
+      }
+    }
+    .section {
+      ul {
+        width: 572px;
+        margin: 0 auto;
+        li {
+          height: 80px;
+          border-bottom: 1px solid #cccccc;
+          img {
+            float: left;
+            width: 53px;
+            height: 54px;
+            margin-top: 14px;
+            margin-left: 9px;
+          }
+          div {
+            margin-left: 78px;
+            h4 {
+              padding-top: 15px;
+              a {
+                color: #333333;
+                font-weight: bold;
+                font-size: 14px;
+              }
+            }
+            p {
+              font-size: 14px;
+              color: #999999;
+              margin-top: 8px;
+            }
+
+            div {
+              float: right;
+              margin-top: -45px;
+              button {
+                display: block;
+                height: 24px;
+                width: 60px;
+                font-size: 12px;
+                color: #666666;
+                background: #cdcdcd;
+                border-radius: 2px;
+                margin-bottom: 5px;
+                &:last-child {
+                  color: #fff;
+                  background: #f27394;
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+    #pages {
+      height: 75px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .right {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    float: left;
+    width: 250px;
+    background: #ffffff;
+    margin-top: 10px;
+    h4 {
+      margin-top: 15px;
+      line-height: 20px;
+      border-left: 6px solid #0ec891;
+      padding-left: 11px;
+      margin-bottom: 15px;
+    }
+    .vote_list {
+      border-top: 1px solid #cccccc;
+      margin-bottom: 20px;
+      ul {
+        margin-left: 18px;
+        margin-right: 64px;
+        li {
+          float: left;
+          margin-right: 69px;
+          padding-left: 20px;
+          margin-top: 14px;
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+          &:nth-child(1) {
+            background: url("../images/chat/chat1/1.png") no-repeat center left;
+            margin-top: 16px;
+          }
+          &:nth-child(2) {
+            background: url("../images/chat/chat1/2.png") no-repeat center left;
+            margin-top: 16px;
+          }
+          &:nth-child(3) {
+            background: url("../images/chat/chat1/3.png") no-repeat center left;
+          }
+          &:nth-child(4) {
+            background: url("../images/chat/chat1/4.png") no-repeat center left;
+          }
+          &:nth-child(5) {
+            background: url("../images/chat/chat1/5.png") no-repeat center left;
+          }
+          &:nth-child(6) {
+            background: url("../images/chat/chat1/6.png") no-repeat center left;
+          }
+          &:nth-child(7) {
+            background: url("../images/chat/chat1/7.png") no-repeat center left;
+          }
+          &:nth-child(8) {
+            background: url("../images/chat/chat1/8.png") no-repeat center left;
+          }
+          &:nth-child(9) {
+            background: url("../images/chat/chat1/9.png") no-repeat center left;
+          }
+          &:nth-child(10) {
+            background: url("../images/chat/chat1/10.png") no-repeat center left;
+          }
+          &:nth-child(11) {
+            background: url("../images/chat/chat1/11.png") no-repeat center left;
+          }
+          &:nth-child(12) {
+            background: url("../images/chat/chat1/12.png") no-repeat center left;
+          }
+          &:nth-child(13) {
+            background: url("../images/chat/chat1/13.png") no-repeat center left;
+          }
+          &:nth-child(14) {
+            background: url("../images/chat/chat1/14.png") no-repeat center left;
+          }
+          &:nth-child(15) {
+            background: url("../images/chat/chat1/15.png") no-repeat center left;
+          }
+          &:nth-child(16) {
+            background: url("../images/chat/chat1/16.png") no-repeat center left;
+          }
+          &:nth-child(17) {
+            background: url("../images/chat/chat1/17.png") no-repeat center left;
+          }
+          &:nth-child(18) {
+            background: url("../images/chat/chat1/18.png") no-repeat center left;
+          }
+          &:nth-child(19) {
+            background: url("../images/chat/chat1/19.png") no-repeat center left;
+          }
+          &:nth-child(20) {
+            background: url("../images/chat/chat1/20.png") no-repeat center left;
+          }
+          &:nth-child(21) {
+            background: url("../images/chat/chat1/21.png") no-repeat center left;
+          }
+          a {
+            color: #666666;
+            font-size: 14px;
+          }
+
+        }
+      }
+    }
+  }
+
+}
+
+.shade {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 9;
+  display: none;
+}
+
+._alert {
+  display: none;
+  width: 490px;
+  height: 300px;
+  z-index: 10;
+  position: fixed;
+  top: 40%;
+  margin-top: -150px;
+  left: 50%;
+  margin-left: -245px;
+  background: #ffffff;
+  p {
+    line-height: 50px;
+    font-size: 18px;
+    color: #333333;
+    padding-left: 16px;
+    margin-top: 8px;
+    button {
+      height: 18px;
+      width: 18px;
+      background: url("../images/claim/close.png") no-repeat center center;
+      margin-left: 366px;
+    }
+  }
+  .btn {
+    height: 30px;
+    width: 67px;
+    border-radius: 4px;
+    background: #ffffff;
+    border: 1px solid #999999;
+    color: #a1a1a1;
+    margin-top: 17px;
+    margin-left: 314px;
+    &:last-child {
+      background: #0ec891;
+      color: #fff;
+      margin-left: 20px;
+    }
+  }
+  textarea {
+    height: 172px;
+    width: 454px;
+    margin-left: 16px;
+  }
+}
+
+._alert_success {
+  display: none;
+  height: 178px;
+  width: 296px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -148px;
+  margin-top: -89px;
+  background: #ffffff;
+  z-index: 11;
+  button {
+    width: 16px;
+    height: 16px;
+    background: url("../images/claim/close.png") no-repeat center;
+    margin-top: 26px;
+    margin-left: 260px;
+  }
+  p {
+    line-height: 24px;
+    background: url("../images/success.png") no-repeat left center;
+    margin-left: 65px;
+    padding-left: 62px;
+    font-size: 16px;
+    margin-top: 25px;
+  }
+}
+
+

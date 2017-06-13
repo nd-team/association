@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹窗登陆-注册</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login_alert.css">
+</head>
+<body>
+<div class="shade"></div>
+<div class="login_alert">
+    <button class="logon_close"></button>
+    <div class="tab_nav"><a href="javascript:void (0)"></a><a class="register" href="javascript:void (0)"></a></div>
+    <p>用户名或密码错误</p>
+    <div class="u_name"><input type="text"></div>
+    <input type="password">
+    <div class="check_forget">
+        <div>
+            <div></div>
+        </div>
+        <a href="javascript:void (0)"></a>
+    </div>
+    <button></button>
+</div>
+
+<div class="register_alert">
+    <div class="tab_nav"><a class="loginter" href="javascript:void (0)"></a><a href="javascript:void (0)"></a></div>
+    <div class="u_name"><input type="text"></div>
+    <div class="verification_btn clear">
+        <input class="verification" type="text">
+      <button></button>
+    </div>
+    <input class="l_user" type="text">
+    <input type="password">
+    <div class="check">
+        <div>
+
+        </div>
+    </div>
+    <button></button>
+
+</div>
+
+
+</body>
+</html>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.u_name input').focus(function () {
+        $('.u_name').css('border', '1px solid #1be2a7')
+    })
+    $('.u_name input').blur(function () {
+        $('.u_name').css('border', 0)
+    })
+    $('input[type=password]').focus(function () {
+        $('input[type=password]').css('border', '1px solid #1be2a7')
+    })
+    $('input[type=password]').blur(function () {
+        $('input[type=password]').css('border', 0)
+    })
+    $('.login_alert .check_forget div').click(function () {
+        $('.login_alert .check_forget div div').css('background', 'url(../images/xzgou.jpg) no-repeat center')
+    })
+    $('.register_alert .check').click(function () {
+        $('.register_alert .check  div').css('background', 'url(../images/xzgou.jpg) no-repeat center')
+    })
+    $('.login_alert .tab_nav .register').click(function () {
+        $('.login_alert').css('display', 'none')
+        $('.register_alert').css('display', 'block')
+    })
+    $('.register_alert .tab_nav .loginter').click(function () {
+        $('.login_alert').css('display', 'block')
+        $('.register_alert').css('display', 'none')
+    })
+    $('.login_alert .logon_close').click(function () {
+     $('.login_alert,.shade').css('display','none')
+    })
+</script>

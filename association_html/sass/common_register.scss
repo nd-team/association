@@ -1,0 +1,113 @@
+body {
+  background: #ffffff;
+}
+button{
+  outline: none;
+}
+.wrap {
+  .title {
+    font-size: 24px;
+    margin-left: -650px;
+    margin-top: 20px;
+  }
+  .owner {
+    margin-top: 50px;
+    color: #999999;
+    a {
+      color: #333333;
+    }
+  }
+}
+
+.banner {
+  height: 873px;
+  width: 552px;
+  margin: 0 auto;
+  .phone, .user_n, .password {
+    width: 550px;
+    height: 54px;
+    border: 1px solid #dddddd;
+    display: flex;
+    span {
+      display: block;
+      height: 54px;
+      line-height: 54px;
+      text-align: justify;
+      padding-left: 20px;
+      padding-right: 20px;
+      width: 60px;
+      text-align-last: justify;
+    }
+    input {
+      height: 54px;
+      width: 450px;
+    }
+  }
+  .phone {
+    margin-top: 60px;
+  }
+  .user_n {
+    margin-top: 30px;
+  }
+  .password {
+    margin-top: 30px;
+  }
+  .result {
+    margin-top: 30px;
+    display: flex;
+    div {
+      border: 1px solid #dddddd;
+      display: flex;
+      span {
+        display: block;
+        height: 54px;
+        line-height: 54px;
+        text-align-last: justify;
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 60px;
+
+      }
+      input {
+        height: 54px;
+        width: 240px;
+      }
+    }
+
+    button {
+      width: 190px;
+      height: 54px;
+      font-size: 16px;
+      background: #10db9f;
+      color: #ffffff;
+      margin-left: 20px;
+      border-radius: 4px;
+
+    }
+  }
+  p {
+    margin-top: 24px;
+    display: flex;
+    a {
+      color: #10db9f;
+    }
+    span{
+      height: 12px;
+      width: 12px;
+      border: 1px solid #dddddd;
+      margin-top: 3px;
+      margin-right: 5px;
+    }
+  }
+  .button {
+    height: 58px;
+    width: 254px;
+    font-size: 16px;
+    display: block;
+    margin: 30px auto;
+    font-size: 16px;
+    color: #ffffff;
+    background: #10db9f;
+    border-radius: 4px;
+  }
+}

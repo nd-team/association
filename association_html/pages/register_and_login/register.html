@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="../../css/login.css">
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="logo"><a href="javascript:void(0)"></a>欢迎注册</div>
+        <div class="login">已有账号?<a href="../login.html">请登录</a></div>
+    </div>
+</header>
+<div id="register-container">
+    <div class="wrap">
+        <div class="register">
+            <form>
+                <div class="form-group">
+                    <label>账号</label> <input type="text" name="username" placeholder="您的账号名/登录名">
+
+                </div>
+                <div class="form-group">
+                    <label>昵称</label> <input type="text"  placeholder="您的昵称">
+                </div>
+                <div class="form-group">
+                    <label>密码</label> <input type="text" name="password" placeholder="您的密码">
+                </div>
+                <div class="form-group">
+                    <label>推荐码</label> <input type="text" placeholder="您的推荐码">
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" checked id="remember">
+                    <label for="remember" onclick="remember(this)"><span><img src="../../images/remember.png" alt=""></span>阅读并同意</label>
+                    <a href="javascript:void(0)">《社群联盟注册协议》</a>
+                    <a href="javascript:void(0)">《隐私政策》</a>
+                </div>
+                <div class="btn">
+                    <a href="javascript:void (0)">注册</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="shade_a"></div>
+<div class="alert_a">
+    <div class="top_a">提示<button>X</button></div>
+    <div class="bottom_a">已经注册成功</div>
+</div>
+
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../js/jquery.validate.min.js"></script>
+<script src="../../js/login.js"></script>
+<script>
+  $('#register-container .btn').click(function () {
+     $('.shade_a,.alert_a').css('display','block')
+  })
+  $('.alert_a .top_a button').click(function () {
+    location.href='./confirmation.html'
+  })
+
+</script>
+</body>
+</html>

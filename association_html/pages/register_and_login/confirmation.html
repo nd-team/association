@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>邀请码信息确认</title>
+    <link rel="stylesheet" href="../../css/login.css">
+    <link rel="stylesheet" href="../../plug/pikaday/pikaday.css">
+
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="logo"><a href="./login.html"></a>信息确认</div>
+    </div>
+</header>
+<div id="determine">
+    <div class="wrap margin_bottom">
+        <ul>
+            <li>
+                <div class="input">
+                    <span class="tit">昵称</span><input type="text" placeholder="输入您的昵称">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">注册号码</span><input type="text" placeholder="输入你的号码">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">邀请码</span> <input type="text" placeholder="输入您的邀请码">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">密码</span> <input type="text" placeholder="输入您的密码">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">名字</span> <input type="text" placeholder="输入您的名字">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">性别</span>
+                    <p class="selval" onclick="_select(this)">您的性别</p>
+                </div>
+                <div class="select">
+                    <p class="option curr">男</p>
+                    <p class="option">女</p>
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">爱好</span>
+                    <p class="selval" onclick="_select(this)">输入您的爱好</p>
+                </div>
+                <div class="select">
+                    <p class="option curr">公开</p>
+                    <p class="option">不公开</p>
+                </div>
+            </li>
+
+            <li>
+                <div class="input">
+                    <span class="tit">现住地址</span> <input type="text" placeholder="输入您的现住地址">
+                </div>
+                <div class="beijin"></div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">年龄</span>
+                    <p class="selval" onclick="_select(this)">输入您的年龄</p>
+                </div>
+                <div class="select">
+                    <p class="option curr">公开</p>
+                    <p class="option">不公开</p>
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">籍贯</span>
+                    <p class="selval" onclick="_select(this)">输入您的籍贯</p>
+                </div>
+                <div class="select">
+                    <p class="option curr">公开</p>
+                    <p class="option">不公开</p>
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">性格</span>
+                    <p class="selval" onclick="_select(this)">输入您的性格</p>
+                </div>
+                <div class="select">
+                    <p class="option curr">公开</p>
+                    <p class="option">不公开</p>
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">所属行业</span> <input type="text" placeholder="输入您的所属行业">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">所在公司名称</span> <input type="text" placeholder="输入您的所在公司名称">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">所在公司职位</span> <input type="text" placeholder="输入您的所在公司职位">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">毕业院校</span> <input type="text" placeholder="输入您的毕业院校">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">毕业学历</span> <input type="text" placeholder="输入您的毕业学历">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">父亲</span> <input type="text" placeholder="输入您的父亲">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">母亲</span> <input type="text" placeholder="输入您的母亲">
+                </div>
+            </li>
+            <li class="marriage">
+                <div class="input">
+                    <span class="tit">婚姻状况</span>
+                    <p class="selval" onclick="_select(this)">输入您的婚姻状况</p>
+                </div>
+                <div class="select">
+                    <p class="option curr">是</p>
+                    <p class="option">否</p>
+                </div>
+            </li>
+            <li class="hello_word">
+                <div class="input"><span class="tit">配偶</span><input type="text" placeholder="输入您的配偶"></div>
+            </li>
+            <li class="hello_word">
+                <div class="input"><span class="tit">子女</span> <input type="text" placeholder="输入您的子女"></div>
+            </li>
+            <li class="hello_word">
+                <div class="input"><span class="tit">子女所就读学校</span><input type="text" placeholder="输入您的子女所就读学校"></div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">邮箱</span><input type="email" placeholder="输入您的邮箱">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">微信</span> <input type="email" placeholder="输入您的微信">
+                </div>
+            </li>
+            <li>
+                <div class="input">
+                    <span class="tit">QQ</span> <input type="email" placeholder="输入您的QQ">
+                </div>
+            </li>
+
+        </ul>
+        <div class="button_btn"><a href="javascript:void(0)">确 定</a></div>
+    </div>
+</div>
+<div class="shade"></div>
+<div class="a_alert">
+    <div class="a_top"><span>提示</span>
+        <button>X</button>
+    </div>
+    <p>信息确认后不能再修改<br>确认保存？</p>
+    <div class="btn_box">
+        <button>取消</button>
+        <button>确认</button>
+    </div>
+</div>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../plug/pikaday/moment.min.js"></script>
+<script src="../../plug/pikaday/pikaday.js"></script>
+<script src="../../js/login.js"></script>
+<script>
+    $('#determine .wrap ul .marriage').click(function () {
+        if ($('#determine .wrap ul .marriage .selval').html() == '是') {
+            $('.hello_word').css('display', 'block')
+        }
+        else {
+            $('.hello_word').css('display', 'none')
+        }
+    })
+    $('.a_alert .a_top button').click(function () {
+        $('.a_alert,.shade').css('display', 'none')
+    })
+    $('.a_alert .btn_box button:first-child').click(function () {
+        $('.a_alert,.shade').css('display', 'none')
+    })
+    $('.button_btn').click(function () {
+        $('.a_alert,.shade').css('display', 'block')
+    })
+
+    var flag = true;
+    $('.beijin').click(function () {
+        if (flag) {
+            $('.beijin').css('background', 'url(../../images/register_login/public.png) no-repeat center')
+            flag=false;
+        }
+        else {
+            $('.beijin').css('background', 'url(../../images/register_login/previte.png) no-repeat center')
+            flag=true;
+        }
+    })
+</script>
+</body>
+</html>

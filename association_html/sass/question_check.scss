@@ -1,0 +1,76 @@
+
+.clear:after {
+  display: block;
+  content: "";
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+button{outline: none;}
+.banner {
+  background:#e7fef8 url("../images/research_center/bg.jpg") no-repeat center top;
+
+  .content {
+    width: 900px;
+    background: #ffffff;
+    margin: 15px auto 35px;
+    h3 {
+      font-size: 22px;
+      text-align: center;
+      padding-top: 43px;
+    }
+    .number {
+      width: 820px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      p {
+        span {
+          color: #0ec891;
+        }
+      }
+    }
+    .title {
+      margin: 13px auto 10px;
+      width: 820px;
+      font-size: 16px;
+      color: #666666;
+      padding-bottom: 17px;
+      border-bottom: 3px solid #0ec891;
+    }
+    ul {
+      width: 820px;
+      margin: 0 auto;
+      padding-top: 18px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #eeeeee;
+      p {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+      li {
+        display: flex;
+        input {
+          margin-top: 4px;
+          margin-right: 6px;
+        }
+        margin-bottom: 14px;
+        &:last-child {
+          margin-button: 18px;
+        }
+      }
+    }
+    button{
+      height: 36px;
+      width: 102px;
+      background: #1be2a7;
+      color: #ffffff;
+      font-size: 16px;
+      border-radius: 4px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-left: 40px;
+    }
+  }
+
+}

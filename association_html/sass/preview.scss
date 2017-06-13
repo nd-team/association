@@ -1,0 +1,192 @@
+body {
+  background: #f5f5f5;
+}
+button {
+  outline: none;
+}
+.fixed_left {
+  width: 70px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #303535;
+  ul {
+    li {
+      height: 74px;
+      &:first-child {
+        background: url("../images/research_center/back.png") no-repeat center;
+      }
+      &:nth-child(2) {
+        background: url("../images/research_center/bianjiwenjuan.png") no-repeat center;
+      }
+      &:last-child {
+        background: url("../images/research_center/shujubaobiao.png") no-repeat center;
+      }
+    }
+  }
+}
+.banner {
+  width: 1200px;
+  margin: 0 auto;
+  .search_sou {
+    position: relative;
+    height: 98px;
+    input {
+      height: 32px;
+      width: 230px;
+      border: 1px solid #eeeeee;
+      border-radius: 16px;
+      padding-left: 40px;
+      margin-top: 45px;
+      &::placeholder {
+        color: #c2c2c2;
+        font-size: 14px;
+      }
+    }
+    button {
+      position: absolute;
+      top: 53px;
+      left: 12px;
+      height: 21px;
+      width: 21px;
+      background: url("../images/research_center/btn.jpg");
+    }
+  }
+  .result {
+    background: #ffffff;
+    padding-bottom: 36px;
+    .p {
+      font-size: 18px;
+      line-height: 82px;
+      text-align: center;
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      .left {
+        padding-left: 30px;
+       div{
+         margin-top: 28px;
+         &:first-child{
+           margin-top: 0;
+         }
+        h4{
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 13px;
+          font-weight: normal;
+        }
+        p {
+          margin-bottom: 28px;
+        }
+        ul {
+          margin-top: 35px;
+          li {
+            display: flex;
+            line-height: 26px;
+            border-top: 1px solid #c2c2c2;
+            border-left: 1px solid #c2c2c2;
+            border-right: 1px solid #c2c2c2;
+            &:last-child {
+              height: 28px;
+              border-bottom: 1px solid #c2c2c2;
+              padding-left: 10px;
+            }
+            b {
+              font-weight: normal;
+              padding-left: 8px;
+            }
+            span {
+              width: 370px;
+              padding-left: 10px;
+              border-right: 1px solid #c2c2c2;
+            }
+            i {
+              width: 200px;
+              padding-left: 8px;
+              color: #0ec891;
+            }
+          }
+        }}
+      }
+      .right {
+        ul {
+          padding-top: 7px;
+          margin-right: 35px;
+          padding-right:8px;
+          margin-top: 66px;
+          background: url("../images/research_center/jiantoushang.jpg") no-repeat 57px 0,url("../images/research_center/jiantouyou.jpg") no-repeat 431px 181px;
+          &:first-child{
+            margin-top:45px;
+          }
+          li {
+            display: flex;
+            height: 20px;
+            &:nth-child(9){
+              div{
+                border-bottom: 1px solid #c2c2c2;
+              }
+              i{
+                border-bottom: 1px solid #c2c2c2;
+              }
+            }
+            &:nth-child(2n){
+              div{
+                background: #f5f7f6;
+              }
+            }
+            &:nth-child(4){
+              div{
+               div{width:(329px/500*65);
+                 height: 20px;
+                 background: #1be2a7;
+               }
+              }
+            }
+            &:nth-child(6){
+              div{
+                div{width:(329px/500*35);
+                      height: 20px;
+                  background: #1be2a7;
+                }
+              }
+            }
+            &:last-child{
+             height: 30px;
+              b{
+                font-weight: normal;
+                text-align: right;
+                flex: 2;
+                margin-top: 13px;
+                &:nth-child(1){flex: 1;}
+              }
+            }
+            div {
+              border-left: 1px solid #c2c2c2;
+              height: 20px;
+              width: 329px;
+            }
+            span{
+              width: 62px;
+              height: 20px;
+              text-align:center;
+            }
+            i{
+              padding-left: 10px;
+              height: 20px;
+              width: 30px;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+#pages {
+  padding-top: 30px;
+  display: flex;
+  padding-bottom: 50px;
+  justify-content: center;
+}
