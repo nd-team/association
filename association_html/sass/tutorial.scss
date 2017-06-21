@@ -1,4 +1,6 @@
-
+button{
+  outline: none;
+}
 .banner-wrap{
 
   .wrap{
@@ -15,6 +17,7 @@
     margin-top:-3px;
     .wrap{
       background:#fff;
+
       .left-sec{
         box-shadow:none;
         .active-head{
@@ -96,6 +99,7 @@
           }
           .comment-list{
             .list-item{
+
               display:flex;
               border-bottom:1px solid #ebebeb;
               padding:20px 0;
@@ -207,6 +211,7 @@
         background:#fff;
         .item{
           display:flex;
+
           justify-content:space-between;
           border-bottom:1px solid #e8e8e8;
           padding:30px 0;
@@ -283,6 +288,34 @@
       }
     }
     .right-sec{
+      .vip_btn{
+        position: relative;
+        button{
+          margin-top: 25px;
+          width: 300px;
+          height: 50px;
+          background: #1be2a7 url("../images/vip_btn.jpg") no-repeat 57px center;
+          font-size: 18px;
+          color: #333333;
+          border-radius: 3px;
+        }
+        span{
+          top: 30px;
+          left: 205px;
+          position: absolute;
+          border-radius: 2px;
+          display: block;
+          height: 20px;
+          line-height: 20px;
+          width: 36px;
+          text-align: center;
+          color: #ffffff;
+          background: #00a171;
+        }
+
+      }
+
+
       width:320px;
       margin-left:20px;
       .icon-list{
@@ -543,8 +576,10 @@
     .content{
       flex:1;
       margin-left:10px;
+      margin-top: -15px;
       .item{
-        margin:20px 0;
+        width: 879px;
+        margin:20px auto;
         input[type="file"]{
           display:none;
         }
@@ -609,7 +644,67 @@
   }
 }
 
+.item {
+  .my_p1{
+    padding-top: 10px;
+    display:flex;
+    select{
+      height: 30px;
+      width: 120px;
+      color: #999999;
+      border:1px solid #eeeeee;
+      margin-right: 5px;
+    }
 
+    span{
+      margin-top: 6px;
+      color: #999999;
+      font-size: 12px;
+    }
+  }
+
+  .my_p2{
+    padding-top: 23px;
+    display: flex;
+    span{
+      font-size: 16px;
+      margin-right: 40px;
+    }
+    div{
+      z-index: 2;
+      position: relative;
+      height: 36px;
+      line-height: 36px;
+      width: 120px;
+      color: #666666;
+      padding-left: 10px;
+      background: url("../images/sanjiao.png") no-repeat right center;
+      &:hover{
+        background: url("../images/sanjiao-hover.png") no-repeat right center;
+      }
+      ul{
+        z-index: 3;
+        display: none;
+        position: absolute;
+        bottom: -72px;
+        left: 0;
+        li{
+          text-align: center;
+          height: 36px;
+          line-height: 36px;
+          width: 130px;
+          color: #666666;
+          background: #ffffff;
+          &:hover{
+            color:#e6733a;
+            background: #f4f4f4;
+          }
+        }
+      }
+    }
+  }
+
+}
 
 
 

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直播设置与直播数据</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/live_time.css">
+    <link rel="stylesheet" href="../../plug/pikaday/pikaday.css">
+</head>
+<body>
+<div>
+    <div class="left_box">
+        <h4>直播中心</h4>
+        <a class="ban_a" href="#">网站首页</a>
+        <label><input type="text" placeholder="名称/标题/主播">
+            <button></button>
+        </label>
+        <p class="p1"><a href="./my_focus.html">我的关注</a></p>
+        <div class="biankuang">
+            >
+            <span class="sp1"></span>
+            <span class="sp2"></span>
+        </div>
+        <div class="bottom_box">
+            <div class="div1">
+                <button class="btn1"></button>
+                <img src="../../images/live_center/touxiang.png" alt="">
+                <button class="btn2">退出</button>
+            </div>
+            <p class="pa">昵称</p>
+            <p class="pb">粉丝：350</p>
+            <p class="pc">贡献值：<span>350</span></p>
+            <p class="pd">经验值：<span>200</span></p>
+
+            <div class="div2">
+                <a href="./my_sub.html">订阅</a>
+                <a href="./history_evew.html">历史</a>
+            </div>
+            <div class="div3">
+                <a href="./personage_live.html">我的直播间</a>
+                <a href="./live_setting_and_num.html">直播设置</a>
+                <a href="javascript:void (0)">直播时长</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="right_box">
+        <p class="title">
+            <a href="javascript:void (0)">直播时长</a>
+        </p>
+        <div class="live_time">
+            <p class="tp">查询结果以北京时间为准</p>
+            <div class="t_box">
+                <span>日期</span>
+                <input type="text" id="start">
+                <span>至</span>
+                <input type="text" id="end">
+                <button>查询</button>
+            </div>
+            <ul>
+                <li>
+                    <span class="span1">序号</span>
+                    <span class="span2">日期</span>
+                    <span class="span3">有效时长</span>
+                    <span class="span4">标题</span>
+                    <span class="span5">直播详情</span>
+                </li>
+                <li>
+                    <span class="span1">1</span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                    <span class="span4"></span>
+                    <span class="span5"></span>
+                </li>
+                <li>
+                    <span class="span1">2</span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                    <span class="span4"></span>
+                    <span class="span5"></span>
+                </li>
+                <li>
+                    <span class="span1">3</span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                    <span class="span4"></span>
+                    <span class="span5"></span>
+                </li>
+                <li>
+                    <span class="span1">4</span>
+                    <span class="span2"></span>
+                    <span class="span3"></span>
+                    <span class="span4"></span>
+                    <span class="span5"></span>
+                </li>
+            </ul>
+
+
+        </div>
+
+
+    </div>
+</div>
+</body>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script src="../../plug/pikaday/moment.min.js"></script>
+<script src="../../plug/pikaday/pikaday.js"></script>
+<script>
+    //日历
+    var i18n = {
+        previousMonth: '上个月',
+        nextMonth: '下个月',
+        months: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+        weekdays: ['周日', '周一', '周二', '周三', '周四', '周五', '周六'],
+        weekdaysShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+    }
+    var start = new Pikaday({
+        numberOfMonths: 1,
+        field: jQuery('#start')[0],
+        minDate: new Date('2000-01-01'),
+        maxDate: new Date('2020-12-31'),
+        yearRange: [2000, 2020],
+        i18n: i18n,
+        onSelect: function () {
+            var date = document.createTextNode(this.getMoment().format('YYYY-MM-DD') + ' ');
+        }
+    });
+    var start = new Pikaday({
+        numberOfMonths: 1,
+        field: jQuery('#end')[0],
+        minDate: new Date('2000-01-01'),
+        maxDate: new Date('2020-12-31'),
+        yearRange: [2000, 2020],
+        i18n: i18n,
+        onSelect: function () {
+            var date = document.createTextNode(this.getMoment().format('YYYY-MM-DD') + ' ');
+        }
+    });
+
+
+</script>
+
+
+</html>

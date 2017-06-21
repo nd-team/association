@@ -7,7 +7,6 @@ body {
 button {
   outline: none;
 }
-
 .fixed_left {
   width: 70px;
   height: 100%;
@@ -30,7 +29,6 @@ button {
     }
   }
 }
-
 .banner {
   margin-left: 90px;
   width: 1812px;
@@ -59,9 +57,9 @@ button {
   }
   .content{
     display: flex;
-    justify-content: space-between;
     .li{
       margin-top: 20px;
+      margin-right: 20px;
       width: 307px;
       height: 110px;
       border-radius: 4px;

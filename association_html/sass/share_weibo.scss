@@ -1,0 +1,119 @@
+html,body{
+  background: #b4daf1;
+}
+button{
+  outline: none;
+}
+.top_div{
+  height:46px;
+  background: #ffffff;
+  div{
+    justify-content: space-between;
+    padding-left: 40px;
+    width: 541px;
+    height: 40px;
+    margin: 0 auto;
+    background:url("../images/live_center/weibo.jpg") no-repeat left center;
+
+    display: flex;
+    span{
+      height: 46px;font-size: 22px;
+      line-height: 46px;
+      font-style: italic;
+    }
+    p{
+      height: 46px;
+      line-height: 46px;
+      a{
+        font-size: 12px;
+        padding-left: 10px;
+        height: 46px;
+        color: #1582bd;
+        &:first-child{
+          padding-right: 10px;
+          border-right: 1px solid #1582bd;
+        }
+      }
+    }
+  }
+}
+.bottom_div{
+  position: relative;
+  padding-left: 21px;
+  padding-top: 20px;
+  padding-right: 21px;
+  width: 559px;
+  height: 363px;
+  background: #ffffff;
+  margin: 20px auto;
+  border-radius: 4px;
+  textarea{
+    padding: 10px;
+    width: 539px;
+    height: 73px;
+    border-radius: 4px;
+  }
+  .p1{
+    margin-top: 12px;
+    display: flex;
+    height: 24px;
+    line-height: 24px;
+    a{
+      background: #f3f3f3 url("../images/live_center/aimg1.jpg") no-repeat 8px center;
+      height: 22px;
+      width: 126px;
+      padding-left: 30px;
+      border: 1px solid #eeeeee;
+      color: #1582bd;
+    }
+  }
+  .div_1{
+    height: 93px;
+    width: 93px;
+    margin-top: 12px;
+    border: 1px solid #eeeeee;
+  }
+  .p2{
+    color: #999999;
+    line-height: 32px;
+  border-bottom: 1px solid #eeeeee;
+  }
+  .div_2{
+    height: 36px;
+    line-height: 36px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    p{
+      display: flex;
+      input{
+        margin-top:12px;
+        margin-right: 8px;
+      }
+      select{
+        border: 0;
+        color: #1582bd;
+      }
+      button{
+        height: 36px;
+        width: 93px;
+        border-radius: 2px;
+        margin-left: 10px;
+        background: #f92d2c;
+        color: #ffffff;
+      }
+    }
+  }
+  .p3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #ececec;
+    width: 581px;
+    height: 24px;
+    line-height: 24px;
+    text-align: right;
+    padding-right: 21px;
+    color: #999999;
+  }
+}

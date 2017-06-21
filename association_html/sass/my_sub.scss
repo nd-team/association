@@ -1,0 +1,306 @@
+html, body {
+  background: #f6f6f6;
+}
+
+button {
+  outline: none;
+}
+
+.left_box {
+  width: 230px;
+  height: 924px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #303636;
+  h4 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 26px;
+    line-height: 28px;
+    padding-left: 57px;
+    background: url("../images/live_center/zhibozhongxin.png") no-repeat left 17px center;
+  }
+  a {
+    display: block;
+    background: url("../images/live_center/shouye.png") no-repeat left 17px center;
+    padding-left: 45px;
+    margin-top: 24px;
+  }
+  label {
+    margin-top: 24px;
+    margin-left: 15px;
+    display: flex;
+    height: 30px;
+    width: 199px;
+    border: 1px solid #535959;
+    border-radius: 2px;
+    background: #464c4c;
+    input {
+      background: #464c4c;
+      height: 30px;
+      width: 160px;
+      padding-left: 10px;
+    }
+    button {
+      height: 30px;
+      width: 30px;
+      background: #464c4c url("../images/live_center/search.jpg") no-repeat center;
+    }
+  }
+  .p1 {
+    color: #acb0b1;
+    background: url("../images/live_center/guanzhu.png") no-repeat left 17px center;
+    padding-left: 40px;
+    margin-top: 30px;
+  }
+  .bottom_box {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #161817;
+    .div1 {
+      display: flex;
+      margin-left: 15px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-right: 14px;
+      border-bottom: 1px solid #2b2d2c;
+      img {
+        display: block;
+        height: 53px;
+        width: 53px;
+        border-radius: 50%;
+      }
+      div {
+        margin-left: 10px;
+        p {
+          color: #c7c7c7;
+          margin-bottom: 6px;
+        }
+        span {
+          color: #c7c7c7;
+        }
+      }
+      button {
+        height: 30px;
+        width: 30px;
+        background: url("../images/live_center/xiangshang.jpg") no-repeat center;
+        margin-left: 35px;
+      }
+    }
+    .div2 {
+      display: flex;
+      height: 47px;
+      p {
+        margin-left: 15px;
+        margin-top: 5px;
+        color: #ffffff;
+        span {
+          color: #fdbf26;
+        }
+      }
+
+    }
+  }
+
+}
+
+.right_box {
+  margin-left: 250px;
+  margin-right: 20px;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    line-height: 44px;
+    height: 44px;
+    border-bottom: 1px solid #eee;
+    a {
+      font-size: 18px;
+      color: #333333;
+      display: block;
+      width: 75px;
+      border-bottom: 3px solid #1be2a7;
+    }
+    button{
+      background:#1be2a7 ;
+      color: #ffffff;
+      height: 36px;
+      width: 106px;
+      border-radius: 4px;
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      position: relative;
+      margin-top: 20px;
+      margin-right: 16px;
+      background: #ffffff;
+      width: 258px;
+      .tuimg{
+        width: 258px;
+        height: 183px;
+        a{
+          background: url("../images/live_center/bofangtubiao.png") no-repeat center;
+          display: none;
+          z-index: 2;
+          position: absolute;
+          height: 51px;
+          width: 51px;
+          top: 65px;
+          left: 104px;
+        }
+        .shade_c {
+          transition: all 0.5s linear;
+          height: 183px;
+          width: 258px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0);
+        }
+        &:hover{
+          .shade_c {
+            background: rgba(0, 0, 0, 0.4);
+          }
+          a {
+            display: block;
+          }
+        }
+        img {
+          display: block;
+          width: 258px;
+          height: 183px;
+        }
+      }
+      .spaned{
+        display: block;
+        background: #1be2a7;
+        color: #ffffff;
+        position: absolute;
+        top: 12px;
+        width:50px;
+        height: 22px;
+        line-height: 22px;
+        text-align: center;
+        left: 0;
+      }
+      .div11{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 7px;
+        display: flex;
+        justify-content: space-between;
+        span{
+          color: #1be2a7;
+        }
+      }
+      .div22{
+        display: flex;
+        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 6px;
+        color: #999999;
+        span{
+          &:last-child{
+            background: url("../images/live_center/xiaoyanjing.png") no-repeat left center;
+            padding-left: 20px;
+          }
+        }
+      }
+      button{
+        height: 26px;
+        width: 76px;
+        border: 1px solid #eeeeee;
+        background: #ffffff;
+        border-radius: 2px;
+        color: #999999;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 175px;
+      }
+      .button{
+        height: 26px;
+        width: 56px;
+        border: 1px solid #eeeeee;
+        background: #ffffff;
+        border-radius: 2px;
+        color: #999999;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 190px;
+      }
+    }
+  }
+
+}
+
+.shade{
+display: none;
+  position: fixed;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8;
+  background: rgba(0,0,0,0.4);
+}
+.alert{
+  display: none;
+  position: fixed;
+  background: #ffffff;
+  top:30%;
+  left: 50%;
+  margin-left: -185px;
+  z-index: 10;
+  height: 200px;
+  width: 371px;
+  border-radius: 4px;
+  .p1{
+    padding-left: 20px;
+    line-height: 50px;
+    border-radius: 4px 4px 0 0 ;
+    height: 50px;
+    background: #1be2a7;
+    font-size: 18px;
+    color: #ffffff;
+    display: flex;
+    padding-right: 20px;
+    justify-content: space-between;
+    button{
+      color: #ffffff;
+      background: #1be2a7;
+      font-size: 30px;
+    }
+  }
+  .p2{
+    color: #999999;
+    line-height: 78px;
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  div{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 70px;
+    button{
+      width: 90px;
+      height: 36px;
+      color: #999999;
+      border-radius: 2px;
+      border:1px solid #cccccc;
+      &:last-child{
+       background: #1be2a7;
+        color: #ffffff;
+        border: 0;
+      }
+    }
+  }
+
+
+}

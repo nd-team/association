@@ -1,0 +1,189 @@
+
+.banner-wrap{
+  .wrap{
+    margin:0 auto;
+  }
+}
+.container{
+  display:flex;
+  justify-content:center;
+  background:#f5f5f5;
+  padding-top:13px;
+  margin-top: -15px;
+
+  .my_afflatus{
+    display:flex;
+    .left_nav{
+      width:210px;
+      background:#fff;
+      padding-top:16px;
+      box-shadow:0 0 5px #ccc;
+    }
+  }
+  &.tutorial-text{
+    background:#fff;
+    .content{
+      flex:1;
+      margin-left:10px;
+      .item{
+        width: 879px;
+        margin:20px auto;
+        input[type="file"]{
+          display:none;
+        }
+        label{
+          margin: auto;
+          display:flex;
+          width:100%;
+          height:196px;
+          border:1px solid #999;
+          background:#fff url("../images/published/img.png") no-repeat center;
+          justify-content:center;
+          align-items:center;
+          img{
+            height:100%;
+            width:100%;
+          }
+          span{
+            color:#999;
+            font-size:18px;
+            margin-top:70px;
+          }
+        }
+        input{
+          width:100%;
+          border-bottom:1px solid #999;
+          font-size:24px;
+          padding:16px 0;
+          text-indent:10px;
+        }
+        textarea{
+          width:96%;
+          height:160px;
+          padding:20px;
+          font-size:18px;
+          resize:none;
+        }
+      }
+      .file{
+        .p1{
+          height: 40px;
+          line-height: 40px;
+          display: flex;
+          span{
+            width: 152px;
+          }
+          div{
+            z-index: 2;
+            position: relative;
+            height: 36px;
+            line-height: 36px;
+            width: 140px;
+            color: #666666;
+            padding-left: 10px;
+            background: url("../images/sanjiao.png") no-repeat right center;
+            &:hover{
+              background: url("../images/sanjiao-hover.png") no-repeat right center;
+            }
+            ul{
+              z-index: 3;
+              display: none;
+              position: absolute;
+              bottom: -72px;
+              left: 0;
+              li{
+                text-align: center;
+                height: 36px;
+                line-height: 36px;
+                width: 150px;
+                color: #666666;
+                background: #ffffff;
+                &:hover{
+                  color:#e6733a;
+                  background: #f4f4f4;
+                }
+              }
+            }
+          }
+          input[type="file"]{
+            display: block;
+            margin-top: -10px;
+            font-size: 12px;
+            background: #ffffff;
+            color: #e56620;
+            border: 0;
+          }
+        }
+        .p2{
+          height: 40px;
+          line-height: 40px;
+          display: flex;
+          span{
+            width: 113px;
+          }
+          div{
+            position: relative;
+            height: 36px;
+            line-height: 36px;
+            width: 90px;
+            color: #666666;
+            padding-left: 10px;
+            background: url("../images/sanjiao.png") no-repeat right center;
+            &:hover{
+              background: url("../images/sanjiao-hover.png") no-repeat right center;
+            }
+            ul{
+              display: none;
+              position: absolute;
+              bottom: -72px;
+              left: 0;
+              li{
+                text-align: center;
+                height: 36px;
+                line-height: 36px;
+                width: 100px;
+                background: #ffffff;
+                color: #666666;
+                &:hover{
+                  color:#e6733a;
+                  background: #f4f4f4;
+                }
+              }
+            }
+          }
+        }
+      }
+      .btn{
+        display:flex;
+        justify-content:flex-end;
+        margin-top:30px;
+        button{
+          width:138px;
+          height:38px;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          border:1px solid #13e9b3;
+          border-radius:5px;
+          font-size:18px;
+          &:last-child{
+            margin-left:30px;
+            background:#13e9b3;
+            color:#fff;
+          }
+          &:first-child{
+            color:#333;
+            background:#fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+

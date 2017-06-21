@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直播设置与直播数据</title>
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/live_setting_and_num.css">
+</head>
+<body>
+<div>
+    <div class="left_box">
+        <h4>直播中心</h4>
+        <a class="ban_a" href="../index.html">网站首页</a>
+        <label><input type="text" placeholder="名称/标题/主播">
+            <button></button>
+        </label>
+        <p class="p1"><a href="./my_focus.html">我的关注</a></p>
+        <div class="biankuang">
+            >
+            <span class="sp1"></span>
+            <span class="sp2"></span>
+        </div>
+        <div class="bottom_box">
+            <div class="div1">
+                <button class="btn1"></button>
+                <img src="../../images/live_center/touxiang.png" alt="">
+                <button class="btn2">退出</button>
+            </div>
+            <p class="pa">昵称</p>
+            <p class="pb">粉丝：350</p>
+            <p class="pc">贡献值：<span>350</span></p>
+            <p class="pd">经验值：<span>200</span></p>
+
+            <div class="div2">
+                <a href="./my_sub.html">订阅</a>
+                <a href="./history_evew.html">历史</a>
+                <a href="javascript:void (0)">消息</a>
+                <span>4</span>
+            </div>
+            <div class="div3">
+                <a href="./personage_live.html">我的直播间</a>
+                <a href="javascript:void (0)">直播设置</a>
+                <a href="./live_time.html">直播时长</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="right_box">
+        <p class="title">
+            <a href="javascript:void (0)">直播间设置</a>
+            <a href="javascript:void (0)">直播数据</a>
+        </p>
+        <div class="setting">
+            <div class="box1"><span>房间ID：</span><input type="text"></div>
+            <div class="box1"><span>直播间地址：</span><input type="text"></div>
+            <div class="box1"><span>直播分类：</span><input type="text"></div>
+            <div class="box2"><span>房间标题：</span><input type="text"></div>
+            <div class="box3">
+                <span>直播公告：</span><textarea placeholder="公告长度不能超过64个汉字"></textarea>
+            </div>
+            <div class="box4">
+                <span>直播详情：</span><textarea></textarea>
+            </div>
+            <div class="box3">
+                <span>分享内容：</span><textarea></textarea>
+            </div>
+            <div class="box5"><span>trmp地址：</span><input type="text">
+                <button>复制</button>
+                <!--<button class="last_btn">复制</button>-->
+            </div>
+            <div class="box5"><span>直播码：</span> <input type="text">
+                <button>复制</button>
+            </div>
+
+            <div class="box6">
+                <button>关闭直播</button>
+                <!--<button>关闭直播</button>-->
+            </div>
+        </div>
+        <div class="num">
+            <ul>
+                <li>
+                    <p>45820</p>
+                    <span>观看总人数</span>
+                </li>
+                <li>
+                    <p>45820</p>
+                    <span>粉丝数量</span>
+                </li>
+                <li>
+                    <p>45220</p>
+                    <span>观看总人数</span>
+                </li>
+                <li>
+                    <p>0</p>
+                    <span>直播时长（分）</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="shade"></div>
+<div class="alert">
+  <div>温馨提示<button>×</button></div>
+  <p>
+    房间信息修改成功<br>
+      需要1-2分钟更新，请耐心等待！
+  </p>
+</div>
+</body>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script>
+    $('.right_box .title a:first-child').click(function () {
+        $('.right_box .setting').css('display','block')
+        console.log('dd')
+        $('.right_box .num').css('display','none')
+        $('.right_box .title a').css({'border-top':0,'background':'#fbfbfb','color':'#333'})
+        $(this).css({'border-top':'3px solid #1be2a7','background':'#fff','color':'#1be2a7'})
+    })
+    $('.right_box .title a:last-child').click(function () {
+        $('.right_box .setting').css('display','none')
+        $('.right_box .num').css('display','block')
+        $('.right_box .title a').css({'border-top':0,'background':'#fbfbfb','color':'#333'})
+        $(this).css({'border-top':'3px solid #1be2a7','background':'#fff','color':'#1be2a7'})
+    })
+   $('.setting .box5 button').click(function () {
+    $(this).css({'background':'#1be2a7','color':'#fff'})
+   })
+  $('.setting .box6 button').click(function () {
+      $(this).css('background','#0fc791')
+      $('.shade,.alert').css('display','block')
+  })
+    $('.alert div button').click(function () {
+        $('.alert,.shade').css('display','none')
+    })
+</script>
+
+
+</html>

@@ -1,0 +1,10 @@
+**/.idea
+.idea
+.project
+**/.project
+**/node_modules
+node_modules
+font
+
+
+

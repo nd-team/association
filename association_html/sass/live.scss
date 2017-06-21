@@ -17,6 +17,13 @@ button {
     display: flex;
     justify-content: space-between;
     .left_list {
+      #pages {
+        margin-top: -20px;
+        height: 110px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
       width: 760px;
       ul {
         margin-top: 16px;
@@ -24,6 +31,7 @@ button {
         justify-content: space-between;
         flex-wrap: wrap;
         li {
+          position: relative;
           background: #ffffff;
           margin-bottom: 22px;
           box-sizing: border-box;
@@ -31,10 +39,41 @@ button {
           &:hover {
             border-bottom: 2px solid #1be2a7;
           }
-          img {
-            height: 184px;
+          .tuimg{
             width: 240px;
-            display: block;
+            height: 184px;
+            a{
+              background: url("../images/live_center/bofangtubiao.png") no-repeat center;
+              display: none;
+              z-index: 2;
+              position: absolute;
+              height: 51px;
+              width: 51px;
+              top: 65px;
+              left: 95px;
+            }
+            .shade_c {
+              transition: all 0.5s linear;
+              height: 184px;
+              width: 240px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: rgba(0, 0, 0, 0);
+            }
+            &:hover{
+              .shade_c {
+                background: rgba(0, 0, 0, 0.4);
+              }
+              a {
+                display: block;
+              }
+            }
+            img {
+              display: block;
+              width: 258px;
+              height: 183px;
+            }
           }
           h5 {
             font-size: 12px;
@@ -77,6 +116,8 @@ button {
         }
       }
       div{
+        margin-top: 20px;
+        background: #ffffff;
         h5{
           line-height: 38px;
           font-size: 18px;
@@ -85,9 +126,15 @@ button {
           border-left: 5px solid #1be2a7;
         }
         ul{
+          padding-bottom: 20px;
+          .li1{
+            position: relative;
+          }
           li{
+            margin-top: 10px;
             display: flex;
             .span1{
+              margin-left: 14px;
               margin-top: 14px;
               height: 20px;
               width: 20px;
@@ -104,17 +151,35 @@ button {
               line-height: 20px;
               color: #999999;
               margin-top: 14px;
+              margin-left: 14px;
             }
             img{
               height: 52px;
               width: 52px;
               margin-left: 14px;
             }
+            .img1{
+              box-sizing: border-box;
+              border: 2px solid #f4c543;
+              border-radius: 50%;
+            }
+            .huangguan{
+              height: 21px;
+              width: 21px;
+              position: absolute;
+              left: 71px;
+              top: -7px;
+            }
             div{
-              margin-left: 20px;
+              margin-top: 0;
+              margin-left: 18px;
                p{
-
+                 color: #333333;
+                 margin-bottom: 6px;
                }
+              span{
+                color: #999999;
+              }
             }
             button{
               background: #1be2a7;
@@ -122,18 +187,37 @@ button {
               height: 26px;
               width: 54px;
               border-radius: 2px;
+              margin-top: 10px;
+              margin-left: 65px;
             }
           }
         }
-
-
       }
-
-
-
-
-
-
+    }
+  }
+}
+.fixed{
+  position: fixed;
+  top: 40%;
+  right:260px;
+  width: 120px;
+  height: 120px;
+  div{
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    img{
+      display: block;
+      height: 52px;
+      width: 52px;
+    }
+    p{
+      height: 52px;
+      width: 52px;
+      color: #1be2a7;
+      border: 1px solid #1be2a7;
+      text-align: center;
+      line-height: 26px;
     }
   }
 

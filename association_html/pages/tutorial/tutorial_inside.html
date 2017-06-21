@@ -7,6 +7,7 @@
     <title>公益活动</title>
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/tutorial.css">
+    <link rel="stylesheet" href="../../plug/layer/skin/layer.css">
 </head>
 <body>
 <header>
@@ -19,15 +20,23 @@
                 <li>
                     <a href="javascript:void(0)" class="logout">退出</a>
                 </li>
-                <li>
+                <li class="setting">
                     <a href="javascript:void(0)" class="set"></a>
+                    <ul>
+                        <li>
+                            <a href="../change_password.html">修改密码</a>
+                        </li>
+                        <li>
+                            <a href="../feedback.html">我要反馈</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" class="news"><i>20</i></a>
+                    <a href="../news.html" class="news"><i>20</i></a>
                 </li>
             </ul>
             <div class="username">
-                <a href="javascript:void(0)">宋小宝</a>
+                <a href="../mine/mine.html">宋小宝</a>
             </div>
             <div class="avatar">
                 <a href="javascript:void(0)"><img src="../../images/crowd/avatar.png" alt=""></a>
@@ -59,9 +68,10 @@
         </ul>
         <div class="search">
             <select>
-                <option value="">全站</option> <option value="">全网</option>
+                <option value="">全站</option>
             </select>
             <input type="text" placeholder="请输入搜索内容">
+            <a href="../search_all.html"></a>
         </div>
     </div>
 </nav>
@@ -79,7 +89,6 @@
     <div class="wrap">
         <img src="../../images/crowd/banner.jpg" alt="">
     </div>
-
 </div>
 <div class="container inside">
     <div class="wrap">
@@ -102,7 +111,7 @@
                         很高兴来到北大，特别是北大即将迎来120周年校庆的之际。过去一个多世纪以来，北大在高等教育领域取得了卓越的成就。
                         很高兴来到北大，特别是北大即将迎来120周年校庆的之际。过去一个多世纪以来，北大在高等教育领域取得了卓越的成就。</p>
                     <a href="javascript:void(0)">
-                        <img src="../../images/crowd/pic01.png" alt="">
+                        <video src="../../inf.mp4" controls width="720" height="360"></video>
                     </a>
                     <p>很高兴来到北大，特别是北大即将迎来120周年校庆的之际。过去一个多世纪以来，北大在高等教育领域取得了卓越的成就。</p>
                     <p>很高兴来到北大，特别是北大即将迎来120周年校庆的之际。过去一个多世纪以来，北大在高等教育领域取得了卓越的成就。
@@ -145,14 +154,12 @@
                                     <p><i>王博文儿：</i>回复<i>@赖先生</i>好的，谢谢！</p>
                                     <button>评论</button>
                                 </div>
-
                             </div>
                             <div class="area">
                                 <p>
                                     <textarea></textarea>
                                     <button>评论</button>
                                 </p>
-
                             </div>
                         </div>
                     </div>
@@ -186,19 +193,21 @@
             <div id="pages"></div>
         </div>
         <div class="right-sec">
+
+                <div class="vip_btn">
+                    <button >VIP下载通道</button>
+                     <span>123</span>
+                </div>
                 <ul class="icon-list">
                     <li><i class="share"></i><span>转发</span></li>
                     <li><i class="talk"></i><span>1225</span></li>
                     <li><i class="follow foled"></i><span>1225</span></li>
                 </ul>
-
-
             <div class="right-item">
                 <div class="r-item-tit">
                     <h4>热门教程</h4>
                     <a href="javascript:void(0)">更多&gt;</a>
                 </div>
-                
                 <div class="activity">
                     <img src="../../images/activity1.png">
                     <div class="act-text">
@@ -311,8 +320,6 @@
         </div>
     </div>
 </div>
-
-
 <footer>
     <div class="wrap">
         <ul>
@@ -327,7 +334,9 @@
 <script src="../../js/jquery-2.1.1.min.js"></script>
 <script src="../../plug/banner/jquery.bxslider.min.js"></script>
 <script src="../../plug/laypage/laypage.js"></script>
+<script src="../../plug/layer/layer.js"></script>
 <script src="../../js/common.js"></script>
+
 <script>
     //分页
     laypage({
@@ -339,6 +348,24 @@
         prev:" ",
         next:" "
     });
+</script>
+<script>
+$('.vip_btn button').click(function () {
+    layer.msg('此视频仅VIP下载',{time:1000,icon: 5});
+})
+//设置弹出框
+var set=true;
+$('.setting').click(function () {
+    if(set){
+        $('.setting ul').css('display','block') ;
+        set=false;
+    }
+    else{
+        $('.setting ul').css('display','none') ;
+        set=true;
+    }
+})
+
 </script>
 </body>
 </html>
