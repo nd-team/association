@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../plug/banner/jquery.bxslider.css">
     <link rel="stylesheet" href="../plug/laypage/skin/_pages.css">
     <link rel="stylesheet" href="../css/share_xiu.css" />
-
 </head>
 <body>
 <header>
@@ -22,8 +21,16 @@
                 <li>
                     <a href="javascript:void(0)" class="logout">退出</a>
                 </li>
-                <li>
+                <li class="setting">
                     <a href="javascript:void(0)" class="set"></a>
+                    <ul>
+                        <li>
+                            <a href="./change_password.html">修改密码</a>
+                        </li>
+                        <li>
+                            <a href="./feedback.html">我要反馈</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="javascript:void(0)" class="news"><i>20</i></a>
@@ -57,14 +64,15 @@
                 <a href="./more.html">更多功能</a>
             </li>
             <li>
-                <a href="javascript:void(0)">聊天室</a>
+                <a href="chatroom/chat_my.html">聊天室</a>
             </li>
         </ul>
         <div class="search">
             <select>
-                <option value="">全站</option> <option value="">全网</option>
+                <option value="">全站</option>
             </select>
             <input type="text" placeholder="请输入搜索内容">
+            <a href="./search_all.html"></a>
         </div>
     </div>
 </nav>
@@ -81,8 +89,8 @@
     </ul>
     <p  class="p1">
         热门干货推荐
-        <button class="btn2">我的干货</button>
-        <button class="btn1">发表干货</button>
+        <a href="javascript:void (0)" class="a_1">我的干货</a>
+        <a href="./share_my.html" class="a_2">发表干货</a>
 
     </p>
 
@@ -494,5 +502,17 @@
         prev: '<', //若不显示，设置false即可
         next: '>' //若不显示，设置false即可
     });
+    //设置弹出框
+    var set=true;
+    $('.setting').click(function () {
+        if(set){
+            $('.setting ul').css('display','block') ;
+            set=false;
+        }
+        else{
+            $('.setting ul').css('display','none') ;
+            set=true;
+        }
+    })
 </script>
 </html>

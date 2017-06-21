@@ -1,0 +1,118 @@
+html,body{
+  background: #72bef2;
+}
+button{
+  outline: none;
+}
+.top_div{
+  height:46px;
+  background: #ffffff;
+  div{
+    justify-content: space-between;
+    padding-left: 45px;
+    width: 541px;
+    height: 40px;
+    margin: 0 auto;
+    background:url("../images/live_center/qzone.jpg") no-repeat left center;
+
+    display: flex;
+    span{
+      height: 46px;font-size: 22px;
+      line-height: 46px;
+      font-weight: bold;
+    }
+    p{
+      height: 46px;
+      line-height: 46px;
+      a{
+        font-size: 12px;
+        padding-left: 10px;
+        height: 46px;
+        color: #1582bd;
+        &:first-child{
+          padding-right: 10px;
+          border-right: 1px solid #1582bd;
+        }
+      }
+    }
+  }
+}
+.bottom_div{
+  margin: 20px auto;
+  padding-top: 18px;
+  border-radius: 4px;
+  width: 561px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 476px;
+  background: #ffffff;
+  .p1{
+    line-height: 36px;
+    height: 36px;
+  }
+  textarea{
+    padding:10px;
+    height: 73px;
+    border: 1px solid #eeeeee;
+    width: 541px;
+    border-radius: 4px;
+  }
+  .p2{
+    width: 376px;
+    line-height: 20px;
+    height: 20px;
+    margin-top: 17px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .p3{
+    margin-top: 4px;
+    a{
+      color: #1582bd;
+    }
+  }
+  .p4{
+    margin-top: 40px;
+    color: #999999;
+  }
+  .p5{
+    display: flex;
+    margin-top: 10px;
+    input{
+      margin-top: 4px;
+      margin-right: 6px;
+    }
+  }
+  .div1{
+    margin-top: 9px;
+    height: 96px;
+    width: 96px;
+    border: 1px solid #eeeeee;
+  }
+  .div2{
+    margin-top: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    justify-content: flex-end;
+    input{
+      margin-top: 14px;
+      margin-right: 5px;
+    }
+    p{
+      margin-top: 10px;
+      margin-right: 8px;
+      a{
+        color: #1582bd;
+      }
+    }
+    button{
+      background: #1582bd;
+      color: #ffffff;
+      height: 36px;
+      width: 80px;
+      border-radius: 2px;
+    }
+  }
+}

@@ -19,12 +19,18 @@
         margin-bottom:54px;
       }
       .sec-title{
+        display: flex;
         margin-bottom:30px;
+       justify-content: space-between;
         span{
           font-size:14px;
           border-left:4px solid #10db9f;
           padding-left:5px;
         }
+        a{
+          margin-top: 50px;
+        }
+
       }
       .sec-con{
         display:flex;

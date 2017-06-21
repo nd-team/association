@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/crowd_funding.css">
     <link rel="stylesheet" href="../plug/banner/jquery.bxslider.css">
+    <link rel="stylesheet" href="../plug/layer/skin/layer.css">
 </head>
 <body>
     <header>
@@ -46,14 +47,15 @@
                     <a href="./more.html">更多功能</a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">聊天室</a>
+                    <a href="chatroom/chat_my.html">聊天室</a>
                 </li>
             </ul>
             <div class="search">
                 <select>
-                    <option value="">全站</option> <option value="">全网</option>
+                    <option value="">全站</option>
                 </select>
                 <input type="text" placeholder="请输入搜索内容">
+                <a href="./search_all.html"></a>
             </div>
         </div>
     </nav>
@@ -65,12 +67,13 @@
     <div class="container">
         <div class="wrap">
             <div class="initiat">
-                <a href="./initiate_crowd.html"><img src="../images/crowd/initiat.png" alt=""></a>
+                <a href="javascript:void (0)"><img src="../images/crowd/initiat.png" alt=""></a>
             </div>
             <section>
                 <div class="sec-title">
-                    <h3>产品众筹</h3>
-                    <span>The Best Hit</span>
+                   <div> <h3>产品众筹</h3>
+                    <span>The Best Hit</span></div>
+                    <a href="javascript:void (0)">更多></a>
                 </div>
                 <ul class="sec-con">
                     <li>
@@ -93,8 +96,6 @@
                                 <span>已筹：<i>￥548710</i></span>
                             </p>
                         </div>
-
-
                     </li>
                     <li>
                         <div>
@@ -297,8 +298,10 @@
             </section>
             <section>
                 <div class="sec-title">
-                    <h3>求助众筹</h3>
+                    <div><h3>求助众筹</h3>
                     <span>Crowd-Funding</span>
+                    </div>
+                    <a href="javascript:void (0)">更多></a>
                 </div>
                 <ul class="sec-con">
                     <li>
@@ -539,6 +542,7 @@
 
     <script src="../js/jquery-2.1.1.min.js"></script>
     <script src="../plug/banner/jquery.bxslider.min.js"></script>
+    <script src="../plug/layer/layer.js"></script>
     <script>
         $('.banner').bxSlider({
             auto:true,
@@ -546,5 +550,21 @@
             pause:3000
         });
     </script>
+    <script>
+        var flag=true
+        $('.container .wrap .initiat a').click(function () {
+            console.log('1')
+            if(flag){
+            layer.msg('仅VIP发表众筹',{time:1000,icon: 5});
+                $('.container .wrap .initiat a').attr('href','javascript:void(0)')
+            }
+            else {
+                $('.container .wrap .initiat a').attr('href','./initiate_crowd.html')
+            }
+        })
+        
+        
+    </script>
+
 </body>
 </html>

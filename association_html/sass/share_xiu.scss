@@ -40,23 +40,27 @@ button{outline:none;}
     padding-left: 18px;
     margin-top: 6px;
     background: #ffffff;
-    button {
+    a {
+      display: inline-block;
       height: 30px;
+      line-height: 30px;
+      text-align: center;
       width: 100px;
       border-radius: 4px;
       float: right;
       margin-top: 6px;
     }
-    .btn1 {
+    .a_1 {
       font-size: 12px;
-      background: #f4d521;
+      background: #0ec891;
       margin-right: 9px;
       margin-left: 15px;
       color: #ffffff;
     }
-    .btn2 {
+    .a_2 {
+      background: #f4d521;
       font-size: 12px;
-      background: #0ec891;
+      color:#333333;
       margin-right: 9px;
     }
   }

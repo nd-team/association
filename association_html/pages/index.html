@@ -20,8 +20,16 @@
                 <li>
                     <a href="javascript:void(0)" class="logout">退出</a>
                 </li>
-                <li>
+                <li class="setting">
                     <a href="javascript:void(0)" class="set"></a>
+                        <ul>
+                            <li>
+                                <a href="./change_password.html">修改密码</a>
+                            </li>
+                            <li>
+                                <a href="./feedback.html">我要反馈</a>
+                            </li>
+                        </ul>
                 </li>
                 <li>
                     <a href="./news.html" class="news"><i>20</i></a>
@@ -55,14 +63,15 @@
                 <a href="./more.html">更多功能</a>
             </li>
             <li>
-                <a href="./chat_join.html">聊天室</a>
+                <a href="chatroom/chat_my.html">聊天室</a>
             </li>
         </ul>
         <div class="search">
             <select>
-                <option value="">全站</option> <option value="">全网</option>
+                <option value="">全站</option>
             </select>
             <input type="text" placeholder="请输入搜索内容">
+            <a href="./search_all.html"></a>
         </div>
     </div>
 </nav>
@@ -373,7 +382,6 @@
         </div>
     </div>
 </div>
-
 <footer>
     <div class="wrap">
         <ul>
@@ -415,6 +423,20 @@
     var week = today[day.getDay()];
    $('.sign .time').html(time);
     $('.sign .big').html(week);
+
+    //设置弹出框
+ var set=true;
+    $('.setting').click(function () {
+        if(set){
+            $('.setting ul').css('display','block') ;
+            set=false;
+        }
+        else{
+            $('.setting ul').css('display','none') ;
+            set=true;
+        }
+    })
 </script>
+
 </body>
 </html>

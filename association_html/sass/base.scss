@@ -37,6 +37,7 @@ input,select{
   font-family: $main-font;
 }
 button{
+
   border: 0;
   font-family: $main-font;
 }
@@ -127,6 +128,35 @@ header{
             }
           }
         }
+        .setting{
+          position: relative;
+            ul{z-index: 5;
+              display: none;
+              width: 86px;
+              position: absolute;
+              bottom: -55px;
+              left: -10px;
+              border: 1px solid #eeeeee;
+              li{
+                margin-left:0;
+                height: 25px;
+                line-height: 25px;
+                width: 86px;
+                background: #f5f5f5;
+
+                &:hover{
+                  background: #ffffff;
+                }
+                a{
+                  display: block;
+                  height: 100%;
+                  width: 100%;
+                  color: #666666;
+                  text-align: center;
+                }
+              }
+            }
+        }
       }
       .username{
         margin-right:16px;
@@ -186,6 +216,7 @@ nav{
       }
     }
     .search{
+      position: relative;
       height:35px;
       border:1px solid #fff;
       display:flex;
@@ -219,6 +250,15 @@ nav{
         &:-ms-input-placeholder{
           color:#fff;
         }
+      }
+      a{
+        display: block;
+        height: 35px;
+        width: 35px;
+        position: absolute;
+        top:0;
+        right: 0;
+        z-index: 3;
       }
     }
   }

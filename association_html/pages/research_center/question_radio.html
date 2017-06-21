@@ -14,22 +14,30 @@
 <header>
     <div class="wrap">
         <div class="logo">
-            <a href="./index.html"></a>
+            <a href="../index.html"></a>
         </div>
         <div class="user">
             <ul class="menu">
                 <li>
                     <a href="javascript:void(0)" class="logout">退出</a>
                 </li>
-                <li>
+                <li class="setting">
                     <a href="javascript:void(0)" class="set"></a>
+                    <ul>
+                        <li>
+                            <a href="../change_password.html">修改密码</a>
+                        </li>
+                        <li>
+                            <a href="../feedback.html">我要反馈</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
-                    <a href="javascript:void(0)" class="news"><i>20</i></a>
+                    <a href="../news.html" class="news"><i>20</i></a>
                 </li>
             </ul>
             <div class="username">
-                <a href="javascript:void(0)">宋小宝</a>
+                <a href="../mine/mine.html">宋小宝</a>
             </div>
             <div class="avatar">
                 <a href="javascript:void(0)"><img src="../../images/crowd/avatar.png" alt=""></a>
@@ -62,9 +70,10 @@
         <div class="search">
             <select>
                 <option value="">全站</option>
-                <option value="">全网</option>
+
             </select>
             <input type="text" placeholder="请输入搜索内容">
+            <a href="../search_all.html"></a>
         </div>
     </div>
 </nav>
@@ -149,5 +158,20 @@
         <p>Copyright &copy; 2009-2017 BEIJINGAIJIATIANCHENG 北京艾佳天诚信息技术有限公司</p>
     </div>
 </footer>
+<script src="../../js/jquery-2.1.1.min.js"></script>
+<script>
+    //设置弹出框
+    var set=true;
+    $('.setting').click(function () {
+        if(set){
+            $('.setting ul').css('display','block') ;
+            set=false;
+        }
+        else{
+            $('.setting ul').css('display','none') ;
+            set=true;
+        }
+    })
+</script>
 </body>
 </html>
